@@ -114,6 +114,7 @@ This project is graded based on the following criteria:
 
 ## How to Submit Your Interactive Front-End Project
 
+
 **Each member of your group** is required to submit the following for review:
 
 * The URL of the deployed application.
