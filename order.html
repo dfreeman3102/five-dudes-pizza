@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="assets/css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Order</title>
 </head>
+
 <body>
-    
+    <header>
+        <nav>
+            <a href="home.html" class="home">Home</a>
+            <a href="menu.html" class="menu">Menu</a>
+            <a href="about.html" class="about-us">About Us</a>
+            <a href="order.html" class="order">Order</a>
+        </nav>
+    </header>
+    <!-- This will hold all the orders -->
+    <section>
+    <div id="order-container" class="container">
+        <h2>Your Order:</h2>
+        <div class="order">
+            <div id="item-ordered"></div>
+            <div id="item-image"></div>
+            <div id="item-description"></div>
+            <div id="item-price"></div>
+        </div>
+    </div>
+</section>
+<!-- This will hold the totals for the order and the checkout -->
+<section>
+    <div id="checkout-container" class="container">
+        <div>Subtotal:<span id="subtotal"></span></div>
+        <div>Sales Tax:<span id="sales-tax"></span></div>
+        <!-- will take some work to implement tip calculator -->
+        <!-- <div>Tip:<input id="tip-input"></input></div>  -->
+        <h3>Total:<span id="total"></span></h3>
+        <div id="place-order"><button id="place-order-button" type="submit">Place Order</button></div>
+    </div>
+</section>
 </body>
+
 </html>
