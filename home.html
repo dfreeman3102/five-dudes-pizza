@@ -23,19 +23,33 @@
     </header>
     <main>
         <!-- section to start the img carousel from bulma -->
-        <section id="img-carousel">
+        <section class="hero is-medium has-carousel">
             <!-- Start of carousel -->
-            <div id="carousel-demo" class="carousel">
+            <div id="carousel-demo" class="hero-carousel">
                 <div class="item-1">
-                    <!-- Image 1 -->
+                    <!-- imgs are just placeholders until the carousel is figured out,
+                        make sure to replace with api imgs and delete this comment -->
+                    <img src="https://t3.ftcdn.net/jpg/06/12/86/62/360_F_612866220_1VuIarMVLgoDAYUtBicQwXNKu07InXyf.jpg">
                 </div>
                 <div class="item-2">
-                    <!-- Image 2 -->
+                    <img src="https://media.istockphoto.com/id/1413684626/photo/classic-pepperoni-pizza-with-cut-slices-isolated-on-white.jpg?s=612x612&w=0&k=20&c=498sVNGAyb7IQb9T9z5X9pnnv0YZpDWgWWKZeDO6lKw=">
                 </div>
                 <div class="item-3">
-                    <!-- Image 3 -->
+                    <img src="https://media.istockphoto.com/id/1377372234/photo/pizza-with-salami-bell-pepper-tomatoes-and-cheese-pickles-bacon-and-sausages-on-a-light.jpg?s=612x612&w=0&k=20&c=Cw2GlLY474sFLmBm4IFsSoSXV4wHZM-ub691aaDqLlw=">
+                </div>
+                <div class="item-4">
+                    <img src="https://media.istockphoto.com/id/1377372234/photo/pizza-with-salami-bell-pepper-tomatoes-and-cheese-pickles-bacon-and-sausages-on-a-light.jpg?s=612x612&w=0&k=20&c=Cw2GlLY474sFLmBm4IFsSoSXV4wHZM-ub691aaDqLlw=">
+                </div>
+                <div class="item-5">
+                    <img src="https://media.istockphoto.com/id/1377372234/photo/pizza-with-salami-bell-pepper-tomatoes-and-cheese-pickles-bacon-and-sausages-on-a-light.jpg?s=612x612&w=0&k=20&c=Cw2GlLY474sFLmBm4IFsSoSXV4wHZM-ub691aaDqLlw=">
+                </div>
+                <div class="item-6">
+                    <img src="https://media.istockphoto.com/id/1377372234/photo/pizza-with-salami-bell-pepper-tomatoes-and-cheese-pickles-bacon-and-sausages-on-a-light.jpg?s=612x612&w=0&k=20&c=Cw2GlLY474sFLmBm4IFsSoSXV4wHZM-ub691aaDqLlw=">
                 </div>
             </div>
+            <div class="hero-head"></div>
+			<div class="hero-body"></div>
+			<div class="hero-foot"></div>
             <!-- End of carousel -->
         </section>
         <!-- section to add different store locations -->
@@ -48,6 +62,12 @@
         </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    </script>
+    <script>
+        bulmaCarousel.attach('#carousel-demo', {
+            slidesToScroll: 1,
+            slidesToShow: 4
+        });
     </script>
     <script src="./assets/js/script.js"></script>
 </body>
