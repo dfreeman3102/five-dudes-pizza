@@ -23,24 +23,59 @@
     </header>
     <main>
         <!-- section to start the img carousel from bulma -->
-        <section id="img-carousel">
+        <section class="hero is-medium has-carousel">
             <!-- Start of carousel -->
-            <div id="carousel-demo" class="carousel">
+            <div id="carousel-demo" class="hero-carousel">
                 <div class="item-1">
-                    <!-- Image 1 -->
+                    <img src="https://foodish-api.com/images/pizza/pizza47.jpg">
                 </div>
                 <div class="item-2">
-                    <!-- Image 2 -->
+                    <img src="https://foodish-api.com/images/pizza/pizza16.jpg">
                 </div>
                 <div class="item-3">
-                    <!-- Image 3 -->
+                    <img src="https://foodish-api.com/images/pizza/pizza3.jpg">
+                </div>
+                <div class="item-4">
+                    <img src="https://foodish-api.com/images/pizza/pizza56.jpg">
+                </div>
+                <div class="item-5">
+                    <img src="https://foodish-api.com/images/pizza/pizza50.jpg">
+                </div>
+                <div class="item-6">
+                    <img src="https://foodish-api.com/images/pizza/pizza89.jpg">
+                </div>
+                <div class="item-7">
+                    <img src="https://foodish-api.com/images/pizza/pizza85.jpg">
+                </div>
+                <div class="item-8">
+                    <img src="https://foodish-api.com/images/pizza/pizza87.jpg">
+                </div>
+                <div class="item-9">
+                    <img src="https://foodish-api.com/images/pizza/pizza55.jpg">
+                </div>
+                <div class="item-10">
+                    <img src="https://foodish-api.com/images/pizza/pizza75.jpg">
                 </div>
             </div>
+            <div class="hero-head"></div>
+			<div class="hero-body"></div>
+			<div class="hero-foot"></div>
             <!-- End of carousel -->
+        </section>
+        <!-- section for a calendar to update based on holiday hours -->
+        <section id="calendar">
+
         </section>
         <!-- section to add different store locations -->
         <section id="locations">
-
+            <ul>
+                <h2>Try out Our Locations!</h2>
+                <li>4423 NC-150, Lexington, NC</li>
+                <li>2107 NC-54, Durham, NC</li>
+                <li>Tarrymore Square Shopping Ctr, 4011 Capital Blvd, Raleigh, NC</li>
+                <li>838 S Main St, Kernersville, Kernersville, NC</li>
+                <li>3710 Peppermill Dr, Wilson, NC</li>
+            </ul>
         </section>
         <!-- section to add the social media accounts -->
         <section id="social-accounts">
@@ -48,6 +83,16 @@
         </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    </script>
+    <script>
+        bulmaCarousel.attach('#carousel-demo', {
+            slidesToScroll: 1,
+            slidesToShow: 2,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            duration: 1000
+        });
     </script>
     <script src="./assets/js/script.js"></script>
 </body>
