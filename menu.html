@@ -12,12 +12,39 @@
 
 <body>
     <header>
-        <nav class="navbar is-fixed-to-top">
-            <a href="home.html" class="navbar-item ">Home</a>
-            <a href="menu.html" class="navbar-item ">Menu</a>
-            <a href="about.html" class="navbar-item ">About Us</a>
-            <a href="order.html" class="navbar-item ">Order</a>
-            <h3 class="navbar-end navbar-item"> Five Dudes Pizza</h3>
+        <nav class="navbar is-white" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+              <img src="assets\5-dudes-logo-short2.png"width="112" height="30">
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a href="home.html" class="navbar-item">
+                  Home
+                </a>
+                <a href="menu.html" class="navbar-item">
+                  Menu
+                </a>
+                <a href="about.html" class="navbar-item">
+                  About Us
+                </a>
+            </div>
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <div class="buttons">
+                  <a href="order.html" class="button is-danger">
+                    <strong>Order NOW!</strong>
+                  </a>
+                </div>
+              </div>
+            </div>
+        </div>
         </nav>
     </header>
 <!-- Menu Banner? -->
