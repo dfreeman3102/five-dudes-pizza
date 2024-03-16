@@ -17,30 +17,3 @@ body {
 .box {
     border: 1px solid black
 }
-.navbar-item {
-  align-self: center;
-  justify-content: center;
-  border-radius: 30px;
-  padding: 20px;
-  width: 120px;
-  height: 40px;
-  background-color: darkred;
-  color: white;
-  font-weight: bold;
-}
-.navbar-end {
-  align-self: center;
-  justify-content: center;
-  border-radius: 25px;
-  padding: 20px;
-  width: 120px;
-  height: 100px;
-  background-color: darkred;
-}
-.navbar {
-  background-color: brown;
-  display: flex;
-  height: 110px;
-  min-width: 50px;
-  gap: 10px;
-}
