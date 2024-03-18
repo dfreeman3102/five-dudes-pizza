@@ -17,3 +17,16 @@ body {
 .box {
     border: 1px solid black
 }
+#pizza-title {
+  background-color: #ff3860;
+  text-align: center;
+  border-radius: 20px;
+  height: 55px;
+}
+.title.is-3 {
+  text-align: center;
+  border-radius: 15px;
+  background-color: #78D37F;
+  border-width: 40px;
+}
+
