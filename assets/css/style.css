@@ -11,36 +11,64 @@ body {
 }
 
 .container {
-    border: 1px solid black
+  border: 1px solid black
 }
 
 .box {
-    border: 1px solid black
+  border: 2px solid black;
+  border-radius: 5px;
+
 }
-.navbar-item {
-  align-self: center;
-  justify-content: center;
-  border-radius: 30px;
-  padding: 20px;
-  width: 120px;
+#pizza-title {
+  background-color: #ff3860;
+  text-align: center;
+  border-radius: 20px;
+  height: 55px;
+  font-style: oblique;
+
+}
+#pizza-info {
+  font-weight:700;
+}
+.title.is-3 {
+  text-align: center;
+  border-radius: 20px;
+  background-color: #78D37F;
   height: 40px;
-  background-color: darkred;
-  color: white;
-  font-weight: bold;
 }
-.navbar-end {
-  align-self: center;
-  justify-content: center;
-  border-radius: 25px;
-  padding: 20px;
-  width: 120px;
-  height: 100px;
-  background-color: darkred;
+.title.is-4 { /*Categories for menu*/
+  border-radius: 20px;
+  background-color: #78D37F;
+  height: 40px;
+  padding: 5px;
+  width: 200px;
+  position: relative;                       
+  left: 180px;
 }
-.navbar {
-  background-color: brown;
-  display: flex;
-  height: 110px;
-  min-width: 50px;
-  gap: 10px;
+
+#box-style {
+  width: 600px;
+}
+
+.pizza-pic {
+  object-fit: cover;
+  width: 400px;
+  height: 400px;
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 20px;
+  border-color: black;
+  padding:0px;
+  margin: 0px;
+  
+  
+}
+.pizza.is-flex {
+  justify-content: space-between;
+  margin: 25px;
+  padding: 10px;
+  border: 10px;
+  text-align: center;
+  
+  
 }

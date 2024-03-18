@@ -13,16 +13,42 @@
 <body>
 
     <header>
-        <nav class="navbar">
-            <a href="home.html" class="navbar-item">Home</a>
-            <a href="menu.html" class="navbar-item">Menu</a>
-            <a href="about.html" class="about-us navbar-item">About Us</a>
-            <a href="order.html" class="order navbar-item">Order</a>
-            <h3 class="navbar-end navbar-item"> Five Dudes Pizza</h3>
+        <nav class="navbar is-white" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item">
+              <img src="assets\5-dudes-logo-short2.png"width="112" height="30">
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a href="home.html" class="navbar-item">
+                  Home
+                </a>
+                <a href="menu.html" class="navbar-item">
+                  Menu
+                </a>
+                <a href="about.html" class="navbar-item">
+                  About Us
+                </a>
+            </div>
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <div class="buttons">
+                  <a href="order.html" class="button is-danger">
+                    <strong>Order NOW!</strong>
+                  </a>
+                </div>
+              </div>
+            </div>
+        </div>
         </nav>
     </header>
     <!-- This will hold all the orders -->
-    <section>
     <div id="order-container" class="container">
         <h2>Your Order:</h2>
         <div class="order">
@@ -32,7 +58,6 @@
             <div id="item-price"></div>
         </div>
     </div>
-</section>
 <!-- This will hold the totals for the order and the checkout -->
 <section>
     <div id="checkout-container" class="container">
@@ -41,7 +66,7 @@
         <!-- will take some work to implement tip calculator -->
         <!-- <div>Tip:<input id="tip-input"></input></div>  -->
         <h3>Total:<span id="total"></span></h3>
-        <div id="place-order"><button id="place-order-button" type="submit">Place Order</button></div>
+        <div id="place-order"><button id="place-order-button" class="button is-success" type="submit">Place Order</button></div>
     </div>
 </section>
   
