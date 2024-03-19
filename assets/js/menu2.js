@@ -25,20 +25,36 @@
 // };
 // api.analyzeRecipe(analyzeRecipeRequest, opts, callback);
 const apiKey = "0bd84def3a95469c8cc5ddc3c2736a4e"
-
+const ingredient = []
 
 function getIngredient() {
-   const ingredientUrl = 'https://api.spoonacular.com/food/ingredients/search'
+  const ingredientUrl = `https://api.spoonacular.com/food/ingredients/search?query=pepperoni&sort=calories&sortDirection=desc&apiKey=${apiKey}&includeNutrition=true`
 
-    fetch(ingredientUrl)
-        .then(function (reponse) {
-            return response.json();
+  fetch(ingredientUrl)
+    .then(function (results) {
+      return results.json();
 
-        })
-        .then(function (data) {
+    })
+    .then(function (data) {
+      const ingredientId = data.results[0].id
+      console.log(ingredientId);
+      getNutrition()
+      function getNutrition() {
+        const nutritionUrl = `https://api.spoonacular.com/food/ingredients/${ingredientId}/information?amount=1&apiKey=${apiKey}`
+        // `https://api.spoonacular.com/food/ingredients/${ingredientId}/information?amount=1&apiKey=${apiKey}`
+        fetch(nutritionUrl)
+          .then(function (results) {
+            return results.json();
+          })
+          .then(function (data) {
             console.log(data);
+            // const nutritionInfo = 
+            
+          })
+      }
+    })
 
-        })
 }
 
 getIngredient()
+
