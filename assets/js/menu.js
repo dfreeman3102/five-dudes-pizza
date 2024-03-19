@@ -1,7 +1,8 @@
 var addToOrder = document.querySelector(".addOrder");
-// var containerAPI = document.querySelector(" ")
+ var containerAPI = document.querySelector("#pepperoni-desc");
 var totalcal = 0;
- var ingred = ["Pepperoni","Cheese" ," marinara sauce"];
+var totalCalcium = 0;
+ var ingred = ["Pepperoni","mozzarella" ," marinara sauce"];
 
 function getPizza() { 
 
@@ -16,12 +17,19 @@ return response.json();
 .then(function(data){
     console.log( data);
    var calories = data.calories;
+  var  calcium = data.totalNutrients.CA.quantity;
+
      totalcal = totalcal + calories
+     totalCalcium = totalCalcium + calcium;
+
+
      console.log("calories " + calories);
      console.log("total cal: "  + totalcal);
+     containerAPI.textContent = " Total cal: " + totalcal + " Total calcium: " + totalCalcium +"mg";
     
-    });
+})
 }
+
 }
 
 
@@ -46,4 +54,4 @@ console.log( data2);
 
 
 getPizza();
-console.log(cal2)
+
