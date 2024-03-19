@@ -3,10 +3,7 @@ var order = [];
 
 addToOrder.addEventListener("click", addOrder())
 
-function addOrder(){
-var pizza = element.
-
-}
+// function addOrder()
 
 // this was created to prevent commit issues
 
@@ -120,6 +117,7 @@ function veggieNutrition() {
         .then(function (results) {
           return results.json();
         })
+      
 
         .then(function (data) {
 
