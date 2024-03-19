@@ -1,3 +1,13 @@
+var addToOrder = document.querySelector(".addOrder");
+var order = [];
+
+addToOrder.addEventListener("click", addOrder())
+
+function addOrder(){
+var pizza = element.
+
+}
+
 // this was created to prevent commit issues
 
 // var SpoonacularApi = require('spoonacular_api');
