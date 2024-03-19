@@ -52,11 +52,11 @@
         <h1 class="title is-1" id="pizza-title">Pizzas</h1>
             <div id="classic-pizzas">
         <h2 class="title is-3" id="classic">Classic Pizzas</h2>
-        <section class="pizza columns is-flex-direction-row has-text-centered m-6">
+        <section class="pizza columns has-text-centered px-4">
             <div class="margherita column is-4">
-                <h3 class="box title is-4 ">Margherita</h3>
+                <h3 class="box column title is-4 is-offset-4">Margherita</h3>
                 <img src="https://foodish-api.com/images/pizza/pizza1.jpg" alt="margherita pizza" class="pizza-pic">
-                <div id="box-style" class="box">
+                <div id="box-style" class="box column">
                     <div class="price">
                         <p id="pizza-info">Price: <span id="margherita-price"></span></p>
                     </div>
@@ -69,9 +69,9 @@
             </div>
 
             <div class="marinara column is-4">
-                <h3 class="box title is-4">Marinara</h3>
+                <h3 class="box column title is-4 is-offset-4">Marinara</h3>
                 <img src="https://foodish-api.com/images/pizza/pizza57.jpg" alt="marinara pizza" class="pizza-pic">
-                <div id="box-style" class="box">
+                <div id="box-style" class="box column">
                     <div class="price">
                         <p id="pizza-info">Price: <span id="marinara-price"></span></p>
                     </div>
@@ -83,10 +83,10 @@
                 </div>
             </div>
 
-            <div class="pepperoni column">
-                <h3 class="box title is-4">Pepperoni</h3>
-                <img src="https://foodish-api.com/images/pizza/pizza14.jpg" alt="pepperoni pizza" class="pizza-pic">
-                <div id="box-style" class="box">
+            <div class="pepperoni column is-4">
+                <h3 class="box column title is-4 is-offset-4">Pepperoni</h3>
+                <img src="https://foodish-api.com/images/pizza/pizza14.jpg" alt="pepperoni pizza" class="pizza-pic p-6">
+                <div id="box-style" class="box column">
                     <div class="price">
                         <p id="pizza-info">Price: <span id="pepperoni-price"></span></p>
                     </div>
@@ -100,11 +100,11 @@
 
         <h2 class="title is-3">Specialty Pizzas</h2>
         <section>
-            <div id="specialty-pizzas" class="pizza is-flex">
-                <div class="veggie">
-                    <h3 class="box title is-4">Veggie Pizza</h3>
-                    <img src="https://foodish-api.com/images/pizza/pizza62.jpg" alt="veggie pizza" class="pizza-pic">
-                    <div id="box-style" class="box">
+            <div id="specialty-pizzas" class="pizza columns has-text-centered px-4">
+                <div class="veggie column">
+                    <h3 class="box column title is-4 is-offset-4">Veggie Pizza</h3>
+                    <img src="https://foodish-api.com/images/pizza/pizza62.jpg" alt="veggie pizza" class="pizza-pic p-6">
+                    <div id="box-style" class="box column">
                         <div class="price">
                             <p id="pizza-info">Price: <span id="veggie-price"></span></p>
                         </div>
@@ -117,9 +117,9 @@
                 </div>
 
                 <div class="meat-lovers">
-                    <h3 class="box title is-4">Meat Lovers</h3>
-                    <img src="https://foodish-api.com/images/pizza/pizza45.jpg" class="pizza-pic">
-                    <div id="box-style" class="box">
+                    <h3 class="box column title is-4 is-offset-4">Meat Lovers</h3>
+                    <img src="https://foodish-api.com/images/pizza/pizza45.jpg" class="pizza-pic p-6">
+                    <div id="box-style" class="box column">
                         <div class="price">
                             <p id="pizza-info">Price: <span id="meat-lovers-price"></span></p>
                         </div>
@@ -131,9 +131,9 @@
                 </div>
 
                 <div class="supreme">
-                    <h3 class="box title is-4">Supreme Pizza</h3>
+                    <h3 class="box column title is-4 is-offset-4">Supreme Pizza</h3>
                     <img src="https://foodish-api.com/images/pizza/pizza37.jpg" class="pizza-pic">
-                    <div id="box-style" class="box">
+                    <div id="box-style" class="box column">
                         <div class="price">
                             <p id="pizza-info">Price: <span id="supreme-price"></span></p>
                         </div>
@@ -145,15 +145,17 @@
                 </div>
 
                 <div class="hawaiian">
-                    <h3>Hawaiian</h3>
+                    <h3 class="box column title is-4 is-offset-4">Hawaiian</h3>
                     <img src="https://foodish-api.com/images/pizza/pizza48.jpg" alt="Hawaiian pizza" class="pizza-pic">
-                    <div class="price">
-                        <p>price: <span id="hawaiian-price"></span></p>
-                    </div>
-                    <p>Description: <span id="hawaiian-desc">Olive oil with shredded mozzarella, pineapple, ham, and bacon</span></p>
-                    <div class=addOrder>
-                        <button> Add to Order</button>
-                    </div>
+                    <div id="box-style" class="box column">
+                        <div class="price">
+                            <p>price: <span id="hawaiian-price"></span></p>
+                        </div>    
+                        <p>Description: <span id="hawaiian-desc">Olive oil with shredded mozzarella, pineapple, ham, and bacon</span></p>
+                        <div class=addOrder>
+                            <button> Add to Order</button>
+                        </div>
+                    </div>    
                 </div>
 
                 <div class="bbq-chicken">
