@@ -24,8 +24,19 @@
 //   }
 // };
 // api.analyzeRecipe(analyzeRecipeRequest, opts, callback);
-const apiKey = "0bd84def3a95469c8cc5ddc3c2736a4e"
-const ingredient = []
+const apiKey = "41342be6e3224906b0a5512ceb92ef9e"
+// "0bd84def3a95469c8cc5ddc3c2736a4e"
+
+const marinaraUrl = `https://api.spoonacular.com/food/ingredients/search?query=marinara&sort=calories&sortDirection=desc&apiKey=${apiKey}&includeNutrition=true`
+const mozzarellaUrl = `https://api.spoonacular.com/food/ingredients/search?query=mozzarella&sort=calories&sortDirection=desc&apiKey=${apiKey}&includeNutrition=true`
+const pepperoniUrl = `https://api.spoonacular.com/food/ingredients/search?query=pepperoni&sort=calories&sortDirection=desc&apiKey=${apiKey}&includeNutrition=true`
+const mushroomUrl = `https://api.spoonacular.com/food/ingredients/search?query=mushroom&sort=calories&sortDirection=desc&apiKey=${apiKey}&includeNutrition=true`
+const bellPepperUrl = `https://api.spoonacular.com/food/ingredients/search?query="bell pepper"&sort=calories&sortDirection=desc&apiKey=${apiKey}&includeNutrition=true`
+const onionUrl = `https://api.spoonacular.com/food/ingredients/search?query=onion&sort=calories&sortDirection=desc&apiKey=${apiKey}&includeNutrition=true`
+const oliveUrl = `https://api.spoonacular.com/food/ingredients/search?query="black olives"&sort=calories&sortDirection=desc&apiKey=${apiKey}&includeNutrition=true`
+
+// const ingredientId = data.results[0].id
+
 
 function getIngredient() {
   const ingredientUrl = `https://api.spoonacular.com/food/ingredients/search?query=pepperoni&sort=calories&sortDirection=desc&apiKey=${apiKey}&includeNutrition=true`
@@ -37,8 +48,9 @@ function getIngredient() {
     })
     .then(function (data) {
       const ingredientId = data.results[0].id
-      console.log(ingredientId);
-      getNutrition()
+      // console.log(ingredientId);
+      // getNutrition()
+
       function getNutrition() {
         const nutritionUrl = `https://api.spoonacular.com/food/ingredients/${ingredientId}/information?amount=1&apiKey=${apiKey}`
         // `https://api.spoonacular.com/food/ingredients/${ingredientId}/information?amount=1&apiKey=${apiKey}`
@@ -47,14 +59,63 @@ function getIngredient() {
             return results.json();
           })
           .then(function (data) {
-            console.log(data);
+            // console.log(data);
             // const nutritionInfo = 
-            
+
           })
       }
+      getNutrition()
     })
 
 }
 
-getIngredient()
+// getIngredient()
 
+const vegNutritionEl = document.getElementById("veggie-nutrition")
+const caloriesArr = []
+
+function veggieNutrition() {
+  fetch(marinaraUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+
+      const ingredientId = data.results[0].id
+
+      // console.log(data.results[0].id);
+      const nutritionUrl = `https://api.spoonacular.com/food/ingredients/${ingredientId}/information?amount=1&apiKey=${apiKey}`
+      fetch(nutritionUrl)
+        .then(function (results) {
+          return results.json();
+        })
+
+        .then(function (data) {
+
+          const marinaraCalories = data.nutrition.nutrients[10].amount
+        })
+    })
+  fetch(mozzarellaUrl)
+    .then(function (results) {
+      return results.json();
+
+    })
+    .then(function (data) {
+      console.log(data)
+      const ingredientId = data.results[0].id
+
+      // console.log(data.results[0].id);
+      const mozzNutritionUrl = `https://api.spoonacular.com/food/ingredients/1001026/information?amount=1&apiKey=${apiKey}`
+      fetch(mozzNutritionUrl)
+        .then(function (results) {
+          return results.json();
+        })
+
+        .then(function (data) {
+
+          const mozzCalories = data.nutrition.nutrients[10].amount
+          console.log(mozzCalories)
+        })
+    })
+}
+veggieNutrition()
