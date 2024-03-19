@@ -80,3 +80,8 @@ body {
   flex-wrap: wrap;
   background-color: blue;
 }
+
+#carousel-demo div img{
+  height: 350px;
+  width: fit-content;
+}
