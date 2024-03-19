@@ -76,7 +76,33 @@ body {
   
 }
 
-#carousel-demo div img{
-  height: 350px;
-  width: fit-content;
+#carousel-demo div img {
+  height: fit-content;
+  width: 800px;
+}
+
+#calendar {
+  height: 500px;
+}
+
+#places-and-times {
+  border: 5px red solid;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#places-and-times h2 {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+#places-and-times ul {
+  width: 50%;
+}
+
+#social-accounts {
+  border: 5px solid blue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
