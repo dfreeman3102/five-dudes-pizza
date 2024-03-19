@@ -126,4 +126,5 @@ function veggieNutrition() {
         })
     })
 }
+
 veggieNutrition()
