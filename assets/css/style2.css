@@ -18,3 +18,9 @@ body {
   border: 2px solid black;
   border-radius: 5px;
 }
+
+.image {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+}
