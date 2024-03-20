@@ -18,6 +18,8 @@ body {
   border: 2px solid black;
   border-radius: 5px;
 
+
+
 }
 
 #pizza-title {
@@ -47,8 +49,10 @@ body {
   height: 40px;
   padding: 5px;
   width: 200px;
-  justify-content: flex-start;
+
 }
+
+
 
 #box-style {
   width: 600px;
@@ -72,12 +76,13 @@ body {
 
 }
 
-.pizza.is-flex {
+.pizza.is-flex-direction-row {
   justify-content: space-between;
-  margin: 25px;
+
+  margin: 0px;
   padding: 10px;
   border: 10px;
-  text-align: center;
+  text-align: left;
   flex-wrap: wrap;
 
 }
@@ -158,7 +163,7 @@ i {
 }
 
 @media screen and (max-width: 425px) {
-  
+
 
   #calendar {
     font-size: 15px;
