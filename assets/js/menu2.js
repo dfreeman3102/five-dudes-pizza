@@ -1,3 +1,25 @@
+const vegNutBtn = document.getElementById('veggie-nutrition-btn')
+const meatNutBtn = document.getElementById('meat-nutrition-btn')
+const supNutBtn = document.getElementById('supreme-nutrition-btn')
+const hawNutBtn = document.getElementById('hawaiian-nutrition-btn')
+const vegNutEl = document.getElementById("veggie-nutrition")
+const meatNutEl = document.getElementById('meat-nutrition')
+const supNutEl = document.getElementById('supreme-nutrition')
+const hawNutEl = document.getElementById('hawaiian-nutrition')
+const vegCalEl = document.getElementById('veggie-calories')
+const meatCalEl = document.getElementById('meat-calories')
+const supCalEl = document.getElementById('supreme-calories')
+const hawCalEl = document.getElementById('hawaiian-calories')
+const vegFatEl = document.getElementById('veggie-fat')
+const meatFatEl = document.getElementById('meat-fat')
+const supFatEl = document.getElementById('supreme-fat')
+const hawFatEl = document.getElementById('hawaiian-fat')
+const vegProEl = document.getElementById('veggie-protein')
+const meatProEl = document.getElementById('meat-protein')
+const supProEl = document.getElementById('supreme-protein')
+const hawProEl = document.getElementById('hawaiian-protein')
+
+
 document.addEventListener('DOMContentLoaded', () => {
   // Functions to open and close a modal
   function openModal($el) {
@@ -35,11 +57,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Add a keyboard event to close all modals
   document.addEventListener('keydown', (event) => {
-    if(event.key === "Escape") {
+    if (event.key === "Escape") {
       closeAllModals();
     }
   });
 });
+
 // var addToOrder = document.querySelector(".addOrder");\
 // var order = [];
 
@@ -76,63 +99,31 @@ document.addEventListener('DOMContentLoaded', () => {
 // };
 // api.analyzeRecipe(analyzeRecipeRequest, opts, callback);
 
-// const apiKey = 
+// const apiKey = "41342be6e3224906b0a5512ceb92ef9e"
 
+
+// "a2250ec5ab8e4ec7bcf5935f815068a3"
 // "aa6cfeb66b1c442aa09657728a431c94"
-  // "0bd84def3a95469c8cc5ddc3c2736a4e"
-// "41342be6e3224906b0a5512ceb92ef9e"
-
-// const marinaraUrl = `https://api.spoonacular.com/food/ingredients/search?query=marinara&sort=calories&sortDirection=desc&apiKey=${apiKey}&includeNutrition=true`
-// const mozzarellaUrl = `https://api.spoonacular.com/food/ingredients/search?query=mozzarella&sort=calories&sortDirection=desc&apiKey=${apiKey}&includeNutrition=true`
-// const pepperoniUrl = `https://api.spoonacular.com/food/ingredients/search?query=pepperoni&sort=calories&sortDirection=desc&apiKey=${apiKey}&includeNutrition=true`
-// const mushroomUrl = `https://api.spoonacular.com/food/ingredients/search?query=mushroom&sort=calories&sortDirection=desc&apiKey=${apiKey}&includeNutrition=true`
-// const bellPepperUrl = `https://api.spoonacular.com/food/ingredients/search?query="bell pepper"&sort=calories&sortDirection=desc&apiKey=${apiKey}&includeNutrition=true`
-// const onionUrl = `https://api.spoonacular.com/food/ingredients/search?query=onion&sort=calories&sortDirection=desc&apiKey=${apiKey}&includeNutrition=true`
-// const oliveUrl = `https://api.spoonacular.com/food/ingredients/search?query="black olives"&sort=calories&sortDirection=desc&apiKey=${apiKey}&includeNutrition=true`
-// let ingredient = []
+// "0bd84def3a95469c8cc5ddc3c2736a4e"
 
 
-
-
-// const ingredientId = data.results[0].id
-
-
-// const ingredientUrl = `https://api.spoonacular.com/food/ingredients/search?query=${ingredient}&sort=calories&sortDirection=desc&apiKey=${apiKey}&includeNutrition=true`
-// function getIngredient() {
-//   var ingredient = "bell pepper"
-//   fetch(ingredientUrl)
-//     .then(function (results) {
-//       return results.json();
-
-//     })
-//     .then(function (data) {
-//       const ingredientId = data.results[0].id
-//       // console.log(ingredientId);
-//       // getNutrition()
-
-//       function getNutrition() {
-//         const nutritionUrl = `https://api.spoonacular.com/food/ingredients/${ingredientId}/information?amount=1&apiKey=${apiKey}`
-//         fetch(nutritionUrl)
-
-//           .then(function (results) {
-//             return results.json();
-//           })
-//           .then(function (data) {
-//             // console.log(data);
-//             // const nutritionInfo = 
-
-//           })
-//       }
-//       getNutrition()
-//     })
-// }
-
-// getIngredient()
-
-const vegNutritionEl = document.getElementById("veggie-nutrition")
+let ingredientId
 const caloriesArr = []
-var ingredientId = ""
 const nutritionUrl = `https://api.spoonacular.com/food/ingredients/${ingredientId}/information?amount=1&apiKey=${apiKey}`
+const crustNutritionUrl = `https://api.spoonacular.com/food/ingredients/93610/information?amount=1&apiKey=${apiKey}`
+  const marinaraNutritionUrl = `https://api.spoonacular.com/food/ingredients/10111549/information?amount=1&apiKey=${apiKey}`
+  const mozzNutritionUrl = `https://api.spoonacular.com/food/ingredients/1001026/information?amount=1&apiKey=${apiKey}`
+  const mushroomNutritionUrl = `https://api.spoonacular.com/food/ingredients/11260/information?amount=1&apiKey=${apiKey}`
+  const bellNutritionUrl = `https://api.spoonacular.com/food/ingredients/10211821/information?amount=1&apiKey=${apiKey}`
+  const onionNutritionUrl = `https://api.spoonacular.com/food/ingredients/11282/information?amount=1&apiKey=${apiKey}`
+  const olivesNutritionUrl = `https://api.spoonacular.com/food/ingredients/1059195/information?amount=1&apiKey=${apiKey}`
+  const pepperoniNutritionUrl = `https://api.spoonacular.com/food/ingredients/7057/information?amount=1&apiKey=${apiKey}`
+  const sausageNutritionUrl = `https://api.spoonacular.com/food/ingredients/7036/information?amount=1&apiKey=${apiKey}`
+  const baconNutritionUrl = `https://api.spoonacular.com/food/ingredients/10123/information?amount=1&apiKey=${apiKey}`
+  const hamNutritionUrl = `https://api.spoonacular.com/food/ingredients/10151/information?amount=1&apiKey=${apiKey}`
+  const pineappleNutritionUrl = `https://api.spoonacular.com/food/ingredients/1029354/information?amount=1&apiKey=${apiKey}`
+  const oliveOilNutritionUrl = `https://api.spoonacular.com/food/ingredients/4053/information?amount=1&apiKey=${apiKey}`
+
 
 let crustCalories
 let crustFat
@@ -174,150 +165,141 @@ let oliveOilCalories
 let oliveOilFat
 let oliveOilProtein
 
-
+ let veggieCalories = 0
 
 
 function getNutrition() {
-  const crustNutritionUrl = `https://api.spoonacular.com/food/ingredients/93610/information?amount=1&apiKey=${apiKey}`
   fetch(crustNutritionUrl)
     .then(function (results) {
       return results.json();
     })
     .then(function (data) {
-      
-      crustCalories = parseFloat(data.nutrition.nutrients[10].amount)*50
+
+      crustCalories = parseFloat(data.nutrition.nutrients[10].amount) * 50
       crustFat = data.nutrition.nutrients[25].amount
       crustProtein = data.nutrition.nutrients[16].amount
-      console.log(crustCalories)
+      console.log(data)
+    
       // *50
     })
-  const marinaraNutritionUrl = `https://api.spoonacular.com/food/ingredients/10111549/information?amount=1&apiKey=${apiKey}`
   fetch(marinaraNutritionUrl)
     .then(function (results) {
       return results.json();
     })
     .then(function (data) {
-      marinaraCalories = parseFloat(data.nutrition.nutrients[10].amount)*250
+      marinaraCalories = parseFloat(data.nutrition.nutrients[10].amount) * 250
       marinaraFat = parseFloat(data.nutrition.nutrients[25].amount)
       marinaraProtein = parseFloat(data.nutrition.nutrients[16].amount)
-      console.log(marinaraCalories)
+      console.log(data)
+
       // *250
     })
 
-  const mozzNutritionUrl = `https://api.spoonacular.com/food/ingredients/1001026/information?amount=1&apiKey=${apiKey}`
   fetch(mozzNutritionUrl)
     .then(function (results) {
       return results.json();
     })
     .then(function (data) {
-      mozzCalories = parseFloat(data.nutrition.nutrients[10].amount)*100
+      mozzCalories = parseFloat(data.nutrition.nutrients[10].amount) * 100
       mozzFat = parseFloat(data.nutrition.nutrients[25].amount)
       mozzProtein = parseFloat(data.nutrition.nutrients[16].amount)
-      console.log(mozzCalories)
-// *100
+      console.log(data)
+
+      // *100
     })
 
-  const mushroomNutritionUrl = `https://api.spoonacular.com/food/ingredients/11260/information?amount=1&apiKey=${apiKey}`
   fetch(mushroomNutritionUrl)
     .then(function (results) {
       return results.json();
     })
     .then(function (data) {
-      mushroomCalories = parseFloat(data.nutrition.nutrients[10].amount)*3
+      mushroomCalories = parseFloat(data.nutrition.nutrients[10].amount) * 3
       mushroomFat = parseFloat(data.nutrition.nutrients[25].amount)
       mushroomProtein = parseFloat(data.nutrition.nutrients[16].amount)
-      console.log(mushroomCalories)
+      console.log(data)
       // *3
     })
 
-  const bellNutritionUrl = `https://api.spoonacular.com/food/ingredients/10211821/information?amount=1&apiKey=${apiKey}`
   fetch(bellNutritionUrl)
     .then(function (results) {
       return results.json();
     })
     .then(function (data) {
-      bellPepperCalories = parseFloat(data.nutrition.nutrients[10].amount)/3
+      bellPepperCalories = parseFloat(data.nutrition.nutrients[10].amount) / 3
       bellPepperFat = parseFloat(data.nutrition.nutrients[25].amount)
       bellPepperProtein = parseFloat(data.nutrition.nutrients[16].amount)
-      console.log(bellPepperCalories)
+      console.log(data)
       // /3
     })
-  const onionNutritionUrl = `https://api.spoonacular.com/food/ingredients/11282/information?amount=1&apiKey=${apiKey}`
   fetch(onionNutritionUrl)
     .then(function (results) {
       return results.json();
     })
     .then(function (data) {
-      onionCalories = parseFloat(data.nutrition.nutrients[10].amount)/2
+      onionCalories = parseFloat(data.nutrition.nutrients[10].amount) / 2
       onionFat = parseFloat(data.nutrition.nutrients[25].amount)
       onionProtein = parseFloat(data.nutrition.nutrients[16].amount)
-      console.log(onionCalories)
+      console.log(data)
       // /2
     })
-  const olivesNutritionUrl = `https://api.spoonacular.com/food/ingredients/1059195/information?amount=1&apiKey=${apiKey}`
   fetch(olivesNutritionUrl)
     .then(function (results) {
       return results.json();
     })
     .then(function (data) {
-      olivesCalories = parseFloat(data.nutrition.nutrients[10].amount)*375
+      olivesCalories = parseFloat(data.nutrition.nutrients[10].amount) * 375
       olivesFat = parseFloat(data.nutrition.nutrients[25].amount)
       olivesProtein = parseFloat(data.nutrition.nutrients[16].amount)
-      console.log(olivesCalories)
+      console.log(data)
       // *375
     })
-  const pepperoniNutritionUrl = `https://api.spoonacular.com/food/ingredients/7057/information?amount=1&apiKey=${apiKey}`
   fetch(pepperoniNutritionUrl)
     .then(function (results) {
       return results.json();
     })
     .then(function (data) {
-      pepperoniCalories = parseFloat(data.nutrition.nutrients[10].amount)*1600
+      pepperoniCalories = parseFloat(data.nutrition.nutrients[10].amount) * 1600
       pepperoniFat = parseFloat(data.nutrition.nutrients[25].amount)
       pepperoniProtein = parseFloat(data.nutrition.nutrients[16].amount)
-      console.log(pepperoniCalories)
+      console.log(data)
       // *1600
     })
-   const sausageNutritionUrl = `https://api.spoonacular.com/food/ingredients/7036/information?amount=1&apiKey=${apiKey}`
   fetch(sausageNutritionUrl)
     .then(function (results) {
       return results.json();
     })
     .then(function (data) {
-      sausageCalories = parseFloat(data.nutrition.nutrients[10].amount)*4.5
+      sausageCalories = parseFloat(data.nutrition.nutrients[10].amount) * 4.5
       sausageFat = parseFloat(data.nutrition.nutrients[25].amount)
       sausageProtein = parseFloat(data.nutrition.nutrients[16].amount)
-      console.log(sausageCalories)
+      console.log(data)
       // *4.5
     })
-  const baconNutritionUrl = `https://api.spoonacular.com/food/ingredients/10123/information?amount=1&apiKey=${apiKey}`
   fetch(baconNutritionUrl)
     .then(function (results) {
       return results.json();
     })
     .then(function (data) {
-      baconCalories = parseFloat(data.nutrition.nutrients[10].amount)*200
+      baconCalories = parseFloat(data.nutrition.nutrients[10].amount) * 200
       baconFat = parseFloat(data.nutrition.nutrients[25].amount)
       baconProtein = parseFloat(data.nutrition.nutrients[16].amount)
-      console.log(baconCalories)
+      console.log(data)
       // *200
 
     })
-  const hamNutritionUrl = `https://api.spoonacular.com/food/ingredients/10151/information?amount=1&apiKey=${apiKey}`
   fetch(hamNutritionUrl)
     .then(function (results) {
       return results.json();
     })
     .then(function (data) {
       console.log(data)
-      hamCalories = parseFloat(data.nutrition.nutrients[10].amount)/120
+      hamCalories = parseFloat(data.nutrition.nutrients[10].amount) / 120
       hamFat = parseFloat(data.nutrition.nutrients[25].amount)
       hamProtein = parseFloat(data.nutrition.nutrients[16].amount)
-      console.log(hamCalories)
+      console.log(data)
       // /120
 
     })
-  const pineappleNutritionUrl = `https://api.spoonacular.com/food/ingredients/1029354/information?amount=1&apiKey=${apiKey}`
   fetch(pineappleNutritionUrl)
     .then(function (results) {
       return results.json();
@@ -326,10 +308,9 @@ function getNutrition() {
       pineappleCalories = parseFloat(data.nutrition.nutrients[10].amount)
       pineappleFat = parseFloat(data.nutrition.nutrients[25].amount)
       pineappleProtein = parseFloat(data.nutrition.nutrients[16].amount)
-      console.log(pineappleCalories)
+      console.log(data)
       // *400
     })
-  const oliveOilNutritionUrl = `https://api.spoonacular.com/food/ingredients/4053/information?amount=1&apiKey=${apiKey}`
   fetch(oliveOilNutritionUrl)
     .then(function (results) {
       return results.json();
@@ -338,25 +319,135 @@ function getNutrition() {
       oliveOilCalories = parseFloat(data.nutrition.nutrients[10].amount)
       oliveOilFat = parseFloat(data.nutrition.nutrients[25].amount)
       oliveOilProtein = parseFloat(data.nutrition.nutrients[16].amount)
-      console.log(oliveOilCalories)
-      *55
+      console.log(data)
+        * 55
     })
 
-getVeggieNutrition(crustCalories, marinaraCalories, mozzCalories, mushroomCalories, bellPepperCalories, onionCalories, olivesCalories)
- console.log(crustCalories)
 }
-getNutrition()
+// getNutrition()
 
+vegNutBtn.addEventListener('click', getVeggieNutrition)
 
+function getVeggieNutrition() {
+  let veggieCalories
+  fetch(crustNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      crustCalories = parseFloat(data.nutrition.nutrients[10].amount) * 50
+      crustFat = data.nutrition.nutrients[25].amount
+      crustProtein = data.nutrition.nutrients[16].amount
+      console.log(crustCalories)
+      veggieCalories += parseFloat(crustCalories)
+      // *50
+          })
 
-function getVeggieNutrition (crustCalories, marinaraCalories, mozzCalories, mushroomCalories, bellPepperCalories, onionCalories, olivesCalories) {
- let veggieCalories = 0
-  veggieCalories += (crustCalories+marinaraCalories+mozzCalories+mushroomCalories+bellPepperCalories+onionCalories+olivesCalories)||0
+  fetch(marinaraNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      marinaraCalories = parseFloat(data.nutrition.nutrients[10].amount) * 250
+      marinaraFat = parseFloat(data.nutrition.nutrients[25].amount)
+      marinaraProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      console.log(marinaraCalories)
+      veggieCalories += marinaraCalories
+      // *250
+    })
+
+  fetch(mozzNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      mozzCalories = parseFloat(data.nutrition.nutrients[10].amount) * 100
+      mozzFat = parseFloat(data.nutrition.nutrients[25].amount)
+      mozzProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      console.log(mozzCalories)
+     veggieCalories += mozzCalories
+      // *100
+    })
+
+  fetch(mushroomNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      mushroomCalories = parseFloat(data.nutrition.nutrients[10].amount) * 3
+      mushroomFat = parseFloat(data.nutrition.nutrients[25].amount)
+      mushroomProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      console.log(mushroomCalories)
+      veggieCalories += mushroomCalories
+      // *3
+    })
+
+  fetch(bellNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      bellPepperCalories = parseFloat(data.nutrition.nutrients[10].amount) / 3
+      bellPepperFat = parseFloat(data.nutrition.nutrients[25].amount)
+      bellPepperProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      console.log(bellPepperCalories)
+      veggieCalories += bellPepperCalories
+      // /3
+    })
+  fetch(onionNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      onionCalories = parseFloat(data.nutrition.nutrients[10].amount) / 2
+      onionFat = parseFloat(data.nutrition.nutrients[25].amount)
+      onionProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      console.log(onionCalories)
+      veggieCalories += onionCalories
+      // /2
+    })
+  fetch(olivesNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      olivesCalories = parseFloat(data.nutrition.nutrients[10].amount) * 375
+      olivesFat = parseFloat(data.nutrition.nutrients[25].amount)
+      olivesProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      console.log(olivesCalories)
+      veggieCalories += olivesCalories
+      // *375
+    })
+  // veggieCalories += (crustCalories + marinaraCalories + mozzCalories + mushroomCalories + bellPepperCalories + onionCalories + olivesCalories)
   console.log(veggieCalories)
+  vegCalEl.textContent = "Calories: 615"
+ vegFatEl.textContent = "Fat: 26g"
+  vegProEl.textContent = "Protein: 24g"
+}
 
- }
+meatNutBtn.addEventListener('click', getMeatNutrition)
 
- function getMeatNutrition () {
+function getMeatNutrition() {
+  meatCalEl.textContent = "Calories: 880"
+  meatFatEl.textContent = "Fat: 40g"
+  meatProEl.textContent = "Protein: 34g"
+ 
+}
 
+supNutBtn.addEventListener('click', getSupremeNutrition)
 
- }
+function getSupremeNutrition() {
+  supCalEl.textContent = "Calories: 820"
+  supFatEl.textContent = "Fat: 34g"
+  supProEl.textContent = "Protein: 28g"
+ 
+}
+
+hawNutBtn.addEventListener('click', getHawaiianNutrition)
+
+function getHawaiianNutrition() {
+  hawCalEl.textContent = "Calories: 780"
+  hawFatEl.textContent = "Fat: 30g"
+  hawProEl.textContent = "Protein: 30g"
+ 
+}
