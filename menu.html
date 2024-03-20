@@ -17,14 +17,13 @@
                 <a class="navbar-item">
                     <img src="assets\5-dudes-logo-short2.png" width="112" height="30">
                 </a>
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                    data-target="navbarBasicExample">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"data-target="navMenu">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </a>
             </div>
-            <div id="navbarBasicExample" class="navbar-menu">
+            <div id="navMenu" class="navbar-menu">
                 <div class="navbar-start">
                     <a href="home.html" class="navbar-item">
                         Home
@@ -53,17 +52,16 @@
         <h1 class="title is-1" id="pizza-title">Pizzas</h1>
         <div id="classic-pizzas">
             <h2 class="title is-3" id="classic">Classic Pizzas</h2>
-            <section class="pizza columns is-flex-direction-row has-text-centered m-6">
-                <div class="margherita column is-4">
+            <section class="pizza tile is-ances">
+                <div class="margherita is-4">
                     <h3 class="box title is-4 ">Margherita</h3>
                     <img src="https://foodish-api.com/images/pizza/pizza1.jpg" alt="margherita pizza" class="pizza-pic">
                     <div id="box-style" class="box">
                         <div class="price">
-                            <p id="pizza-info">Price: <span id="margherita-price"></span></p>
+                            <p id="pizza-info">Price: $16<span id="margherita-price"></span></p>
                         </div>
                         <p id="pizza-info">Description: <span id="margherita-desc">Marinara sauce with fresh mozzarella,
-                                basil, and olive
-                                oil</span></p>
+                                basil, and olive oil</span></p>
                         <div id="margherita-nutrition"></div>
                         <div class=addOrder>
                             <button class="button is-danger"> Add to Order</button>
@@ -76,10 +74,10 @@
                     <img src="https://foodish-api.com/images/pizza/pizza57.jpg" alt="marinara pizza" class="pizza-pic">
                     <div id="box-style" class="box">
                         <div class="price">
-                            <p id="pizza-info">Price: <span id="marinara-price"></span></p>
+                            <p id="pizza-info">Price: $14<span id="marinara-price"></span></p>
                         </div>
-                        <p id="pizza-info">Description: Marinara sauce with sliced garlic and olive oil (no
-                            cheese)<span id="marinara-desc"></span></p>
+                        <p id="pizza-info">Description: Marinara sauce with sliced garlic and olive oil (no cheese)<span
+                                id="marinara-desc"></span></p>
                         <div id="marinara-nutrition"></div>
                         <div class=addOrder>
                             <button class="button is-danger"> Add to Order</button>
@@ -92,7 +90,7 @@
                     <img src="https://foodish-api.com/images/pizza/pizza14.jpg" alt="pepperoni pizza" class="pizza-pic">
                     <div id="box-style" class="box">
                         <div class="price">
-                            <p id="pizza-info">Price: <span id="pepperoni-price"></span></p>
+                            <p id="pizza-info">Price: $17<span id="pepperoni-price"></span></p>
                         </div>
                         <p id="pizza-info">Description: Marinara sauce with pepperoni and fresh mozzarella<span
                                 id="pepperoni-desc"></span></p>
@@ -115,12 +113,23 @@
                             class="pizza-pic">
                         <div id="box-style" class="box">
                             <div class="price">
-                                <p id="pizza-info">Price: <span id="veggie-price"></span></p>
+                                <p id="pizza-info">Price: $19<span id="veggie-price"></span></p>
                             </div>
                             <p id="pizza-info">Description: <span id="veggie-desc">Marinara sauce with shredded
-                                    mozzarella, mushrooms, bell
-                                    peppers, onions, and black olives</span></p>
-                            <div id="veggie-nutrition"></div>
+                                    mozzarella, mushrooms, bell peppers, onions, and black olives</span></p>
+                           
+
+                                <div id="veggie-modal" class="modal">
+                                    <div class="modal-background"></div>
+                                    <div class="modal-content">
+                                     <div id="veggie-nutrition"></div> 
+                                    </div>
+                                    <button class="modal-close is-large" aria-label="close"></button>
+                                  </div>
+                                  <button class="js-modal-trigger" data-target="veggie-modal">
+                                    Nutrition Info
+                                  </button>
+                          
                             <div class=addOrder>
                                 <button class="button is-danger"> Add to Order</button>
                             </div>
@@ -132,10 +141,10 @@
                         <img src="https://foodish-api.com/images/pizza/pizza45.jpg" class="pizza-pic">
                         <div id="box-style" class="box">
                             <div class="price">
-                                <p id="pizza-info">Price: <span id="meat-lovers-price"></span></p>
+                                <p id="pizza-info">Price: $21<span id="meat-lovers-price"></span></p>
                             </div>
-                            <p id="pizza-info">Description: <span id="meat-lovers-desc">Marinara sauce with sausage,
-                                    pepperoni, and crumbled bacon</span></p>
+                            <p id="pizza-info">Description: <span id="meat-lovers-desc">Marinara sauce with shredded
+                                    mozzarella, sausage, pepperoni, and bacon</span></p>
                             <div id="meat-nutrition"></div>
                             <div class=addOrder>
                                 <button class="button is-danger"> Add to Order</button>
@@ -148,10 +157,10 @@
                         <img src="https://foodish-api.com/images/pizza/pizza37.jpg" class="pizza-pic">
                         <div id="box-style" class="box">
                             <div class="price">
-                                <p id="pizza-info">Price: <span id="supreme-price"></span></p>
+                                <p id="pizza-info">Price: $22<span id="supreme-price"></span></p>
                             </div>
-                            <p id="pizza-info">Description: <span id="supreme-desc">Marinara sauce with bellpepper,
-                                    olives, onions, pepperoni, and crumbled sausage</span></p>
+                            <p id="pizza-info">Description: <span id="supreme-desc">Marinara sauce with shredded
+                                    mozzarella, bell pepper, olives, onions, pepperoni, and sausage</span></p>
                             <div id="supreme-nutrition"></div>
                             <div class=addOrder>
                                 <button class="button is-danger"> Add to Order</button>
@@ -160,20 +169,22 @@
                     </div>
 
                     <div class="hawaiian">
-                        <h3>Hawaiian</h3>
+                        <h3 class="box title is-4">Hawaiian</h3>
                         <img src="https://foodish-api.com/images/pizza/pizza48.jpg" alt="Hawaiian pizza"
                             class="pizza-pic">
-                        <div class="price">
-                            <p>price: <span id="hawaiian-price"></span></p>
-                        </div>
-                        <p>Description: <span id="hawaiian-desc">Olive oil with shredded mozzarella, pineapple, ham, and
-                                bacon</span></p>
-                        <div id="hawaiian-nutrition"></div>
-                        <div class=addOrder>
-                            <button> Add to Order</button>
+                        <div id="box-style" class="box">
+                            <div class="price">
+                                <p id="pizza-info">Price: $19<span id="hawaiian-price"></span></p>
+                            </div>
+                            <p id="pizza-info">Description: <span id="hawaiian-desc">Olive oil with shredded mozzarella,
+                                    pineapple, ham, and bacon</span></p>
+                            <div id="hawaiian-nutrition"></div>
+                            <div class=addOrder>
+                                <button class="button is-danger"> Add to Order</button>
+                            </div>
                         </div>
                     </div>
-
+                    <!-- 
                     <div class="bbq-chicken">
                         <h3>BBQ Chicken</h3>
                         <img src="" alt="bbq chicken pizza" class="pizza-pic">
@@ -185,9 +196,9 @@
                         <div class=addOrder>
                             <button> Add to Order</button>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="buffalo-chicken">
+                    <!-- <div class="buffalo-chicken">
                         <h3>Buffalo Chicken</h3>
                         <img src="" alt="buffalo chicken pizza" class="pizza-pic">
                         <div class="price">
@@ -211,7 +222,7 @@
                         <div class=addOrder>
                             <button> Add to Order</button>
                         </div>
-                    </div>
+                    </div> -->
 
 
             </section>
@@ -237,7 +248,7 @@
 
     </main>
 </body>
- <script src="./assets/js/menu.js"></script> 
-<!--<script src="./assets/js/menu2.js"></script>-->
+<script src="./assets/js/menu.js"></script>
+<!-- <script src="./assets/js/menu2.js"></script> -->
 
 </html>
