@@ -1,3 +1,7 @@
+//sets storage for order
+var order = ["Pepperoni", "Cheese", "Supreme", "Meat Lovers"];
+localStorage.setItem("order", JSON.stringify(order));
+
 const vegNutBtn = document.getElementById('veggie-nutrition-btn')
 const meatNutBtn = document.getElementById('meat-nutrition-btn')
 const supNutBtn = document.getElementById('supreme-nutrition-btn')
