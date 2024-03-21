@@ -17,7 +17,7 @@
                 <a class="navbar-item">
                     <img src="assets\5-dudes-logo-short2.png" width="112" height="30">
                 </a>
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"data-target="navMenu">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -25,7 +25,7 @@
             </div>
             <div id="navMenu" class="navbar-menu">
                 <div class="navbar-start">
-                    <a href="home.html" class="navbar-item">
+                    <a href="index.html" class="navbar-item">
                         Home
                     </a>
                     <a href="menu.html" class="navbar-item">
@@ -117,19 +117,25 @@
                             </div>
                             <p id="pizza-info">Description: <span id="veggie-desc">Marinara sauce with shredded
                                     mozzarella, mushrooms, bell peppers, onions, and black olives</span></p>
-                           
+                            <button id="veggie-nutrition-btn">Get Nutrition</button>
 
-                                <div id="veggie-modal" class="modal">
-                                    <div class="modal-background"></div>
-                                    <div class="modal-content">
-                                     <div id="veggie-nutrition"></div> 
-                                    </div>
+                            <!-- <div id="veggie-modal" class="modal"> -->
+                            <!-- <div class="modal-background"></div> -->
+                            <!-- <div class="modal-content"> -->
+                            <!-- <p>Nutrition Info</p> -->
+
+                            <div id="veggie-nutrition">
+                                <div id="veggie-calories"></div>
+                                <div id="veggie-fat"></div>
+                                <div id="veggie-protein"></div>
+                            </div>
+                            <!-- </div>
                                     <button class="modal-close is-large" aria-label="close"></button>
                                   </div>
-                                  <button class="js-modal-trigger" data-target="veggie-modal">
+                                  <button id="veggie-nutrition-btn" class="js-modal-trigger" data-target="veggie-modal">
                                     Nutrition Info
-                                  </button>
-                          
+                                  </button> -->
+
                             <div class=addOrder>
                                 <button class="button is-danger"> Add to Order</button>
                             </div>
@@ -145,7 +151,12 @@
                             </div>
                             <p id="pizza-info">Description: <span id="meat-lovers-desc">Marinara sauce with shredded
                                     mozzarella, sausage, pepperoni, and bacon</span></p>
-                            <div id="meat-nutrition"></div>
+                            <button id="meat-nutrition-btn">Get Nutrition</button>
+                            <div id="meat-nutrition">
+                                <div id="meat-calories"></div>
+                                <div id="meat-fat"></div>
+                                <div id="meat-protein"></div>
+                            </div>
                             <div class=addOrder>
                                 <button class="button is-danger"> Add to Order</button>
                             </div>
@@ -160,8 +171,13 @@
                                 <p id="pizza-info">Price: $22<span id="supreme-price"></span></p>
                             </div>
                             <p id="pizza-info">Description: <span id="supreme-desc">Marinara sauce with shredded
-                                    mozzarella, bell pepper, olives, onions, pepperoni, and sausage</span></p>
-                            <div id="supreme-nutrition"></div>
+                                    mozzarella, bell pepper, black olives, onions, pepperoni, and sausage</span></p>
+                            <button id="supreme-nutrition-btn">Get Nutrition</button>
+                            <div id="supreme-nutrition">
+                                <div id="supreme-calories"></div>
+                                <div id="supreme-fat"></div>
+                                <div id="supreme-protein"></div>
+                            </div>
                             <div class=addOrder>
                                 <button class="button is-danger"> Add to Order</button>
                             </div>
@@ -178,7 +194,12 @@
                             </div>
                             <p id="pizza-info">Description: <span id="hawaiian-desc">Olive oil with shredded mozzarella,
                                     pineapple, ham, and bacon</span></p>
-                            <div id="hawaiian-nutrition"></div>
+                            <button id="hawaiian-nutrition-btn">Get Nutrition</button>
+                            <div id="hawaiian-nutrition">
+                                <div id="hawaiian-calories"></div>
+                                <div id="hawaiian-fat"></div>
+                                <div id="hawaiian-protein"></div>
+                            </div>
                             <div class=addOrder>
                                 <button class="button is-danger"> Add to Order</button>
                             </div>
@@ -249,6 +270,6 @@
     </main>
 </body>
 <script src="./assets/js/menu.js"></script>
-<!-- <script src="./assets/js/menu2.js"></script> -->
+<script src="./assets/js/menu2.js"></script>
 
 </html>
