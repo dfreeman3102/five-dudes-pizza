@@ -1,8 +1,15 @@
 var listEl = document.getElementById("orderList");
 var buttonEl = document.createElement("button");
-var orderArray = JSON.parse(localStorage.getItem("order")) || [];
-var order = ["Pepperoni", "Cheese", "Supreme", "Meat Lover"];
+var orderArray = [];
+var storedOrder = localStorage.getItem(order);
 
+if(storedOrder){
+    orderArray = JSON.parse(storedOrder);
+} else {
+    console.log("No order Found")
+}
+
+console.log("Saved Order", orderArray)
 function addToOrder(newItems) {
     console.log(order);
     newItems.forEach(function (newItem) {// Check each item in newItems for duplicates
@@ -10,7 +17,6 @@ function addToOrder(newItems) {
             orderArray.push(newItem);
         }
     });
-    localStorage.setItem("order", JSON.stringify(orderArray));
     displayOrder();
 }
 

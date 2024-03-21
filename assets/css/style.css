@@ -17,6 +17,9 @@ body {
 .box {
   border: 2px solid black;
   border-radius: 5px;
+
+
+
 }
 
 #pizza-title {
@@ -46,8 +49,17 @@ body {
   height: 40px;
   padding: 5px;
   width: 200px;
-  text-align: center;
 
+}
+
+
+
+#box-style {
+  width: 600px;
+}
+
+.column.is-4 {
+  justify-content: space-around;
 }
 
 .pizza-pic {
@@ -60,10 +72,20 @@ body {
   border-color: black;
   padding: 0px;
   margin: 0px;
-  
+
+
 }
 
+.pizza.is-flex-direction-row {
+  justify-content: space-between;
 
+  margin: 0px;
+  padding: 10px;
+  border: 10px;
+  text-align: left;
+  flex-wrap: wrap;
+
+}
 
 /* homepage start*/
 #carousel-demo div img {
