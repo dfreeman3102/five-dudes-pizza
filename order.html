@@ -2,76 +2,77 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Order</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Order</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
+  <header>
+    <nav class="navbar is-white" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <img src="assets\5-dudes-logo-short2.png" width="112" height="30">
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="index.html" class="navbar-item">
+            Home
+          </a>
+          <a href="menu.html" class="navbar-item">
+            Menu
+          </a>
+          <a href="about.html" class="navbar-item">
+            About Us
+          </a>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a href="order.html" class="button is-danger">
+                <strong>Order NOW!</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- This will hold all the orders -->
+  <div id="order-container" class="container has-text-centered">
+    <h2 class="title box">Your Order:</h2>
+    <div class="order">
+      <div id="item-ordered"></div>
+      <div id="item-image"></div>
+      <div id="item-description"></div>
+      <div id="item-price"></div>
+    </div>
+  </div>
+  <!-- This will hold the totals for the order and the checkout -->
+  <section>
+    <div id="checkout-container" class="container box">
+      <ul id="orderList">
 
-    <header>
-        <nav class="navbar is-white" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item">
-              <img src="assets\5-dudes-logo-short2.png"width="112" height="30">
-            </a>
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-            </a>
-        </div>
-        <div id="navMenu" class="navbar-menu">
-            <div class="navbar-start">
-                <a href="index.html" class="navbar-item">
-                  Home
-                </a>
-                <a href="menu.html" class="navbar-item">
-                  Menu
-                </a>
-                <a href="about.html" class="navbar-item">
-                  About Us
-                </a>
-            </div>
-            <div class="navbar-end">
-              <div class="navbar-item">
-                <div class="buttons">
-                  <a href="order.html" class="button is-danger">
-                    <strong>Order NOW!</strong>
-                  </a>
-                </div>
-              </div>
-            </div>
-        </div>
-        </nav>
-    </header>
-    <!-- This will hold all the orders -->
-    <div id="order-container" class="container">
-        <h2>Your Order:</h2>
-        <div class="order">
-            <div id="item-ordered"></div>
-            <div id="item-image"></div>
-            <div id="item-description"></div>
-            <div id="item-price"></div>
-        </div>
+      </ul>
+      <div>Subtotal:<span id="subtotal"></span></div>
+      <div>Sales Tax:<span id="sales-tax"></span></div>
+      <!-- will take some work to implement tip calculator -->
+      <!-- <div>Tip:<input id="tip-input"></input></div>  -->
+      <h3>Total:<span id="total"></span></h3>
+      <div id="place-order"><button id="place-order-button" class="button is-success" type="submit">Place Order</button>
+      </div>
     </div>
-<!-- This will hold the totals for the order and the checkout -->
-<section>
-    <div id="checkout-container" class="container">
-        <ul id="orderList">
-          
-        </ul>
-        <div>Subtotal:<span id="subtotal"></span></div>
-        <div>Sales Tax:<span id="sales-tax"></span></div>
-        <!-- will take some work to implement tip calculator -->
-        <!-- <div>Tip:<input id="tip-input"></input></div>  -->
-        <h3>Total:<span id="total"></span></h3>
-        <div id="place-order"><button id="place-order-button" class="button is-success" type="submit">Place Order</button></div>
-    </div>
-</section>
-<script src="./assets/js/order.js"></script>
+  </section>
+  <script src="./assets/js/order.js"></script>
 </body>
+
 </html>
