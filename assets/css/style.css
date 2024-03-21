@@ -1,0 +1,181 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.container {
+  border: 1px solid black
+}
+
+.box {
+  border: 2px solid black;
+  border-radius: 5px;
+
+
+
+}
+
+#pizza-title {
+  background-color: #ff3860;
+  text-align: center;
+  border-radius: 20px;
+  height: 55px;
+  font-style: oblique;
+
+}
+
+#pizza-info {
+  font-weight: 700;
+}
+
+.title.is-3 {
+  text-align: center;
+  border-radius: 20px;
+  background-color: #78D37F;
+  height: 40px;
+}
+
+.title.is-4 {
+  /*Categories for menu*/
+  border-radius: 20px;
+  background-color: #78D37F;
+  height: 40px;
+  padding: 5px;
+  width: 200px;
+
+}
+
+
+
+#box-style {
+  width: 600px;
+}
+
+.column.is-4 {
+  justify-content: space-around;
+}
+
+.pizza-pic {
+  object-fit: cover;
+  width: 400px;
+  height: 400px;
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 20px;
+  border-color: black;
+  padding: 0px;
+  margin: 0px;
+
+
+}
+
+.pizza.is-flex-direction-row {
+  justify-content: space-between;
+
+  margin: 0px;
+  padding: 10px;
+  border: 10px;
+  text-align: left;
+  flex-wrap: wrap;
+
+}
+
+/* homepage start*/
+#carousel-demo div img {
+  height: fit-content;
+  width: 100%;
+}
+
+#calendar {
+  height: 500px;
+}
+
+#places-and-times {
+  display: flex;
+  flex-wrap: wrap;
+  background: red;
+  color: white;
+}
+
+h2 {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  color: black;
+  padding: 10px;
+}
+
+#places-and-times ul {
+  width: 50%;
+}
+
+#social-accounts {
+  background: red;
+}
+
+#icons {
+  display: flex;
+  justify-content: center;
+}
+
+i {
+  font-size: 50px;
+  display: flex;
+  padding: 10px;
+  margin: 5px;
+}
+
+.fa-square-facebook {
+  background: #316FF6;
+  color: white;
+  border-radius: 20px;
+}
+
+.fa-tiktok {
+  background: linear-gradient(#69C9D0, #EE1D52);
+  color: white;
+  border-radius: 20px;
+}
+
+.fa-square-instagram {
+  color: white;
+  background: linear-gradient(#feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  border-radius: 20px;
+}
+
+.fa-square-x-twitter {
+  background: white;
+  color: black;
+  border-radius: 20px;
+}
+
+.fa-square-snapchat {
+  color: #FFFC00;
+  background: black;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 425px) {
+
+
+  #calendar {
+    font-size: 15px;
+  }
+
+  #places-and-times ul {
+    width: 100%;
+  }
+
+  i {
+    font-size: 25px;
+  }
+}
+
+/* homepage end */

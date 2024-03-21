@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bulma-calendar/dist/css/bulma-calendar.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <!-- Nav bar to access the other pages to the site -->
+        <header>
+            <nav class="navbar is-white" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item">
+                        <img src="assets\5-dudes-logo-short2.png" width="112" height="30">
+                    </a>
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div id="navMenu" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a href="index.html" class="navbar-item">
+                            Home
+                        </a>
+                        <a href="menu.html" class="navbar-item">
+                            Menu
+                        </a>
+                        <a href="about.html" class="navbar-item">
+                            About Us
+                        </a>
+                    </div>
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="buttons">
+                                <a href="order.html" class="button is-danger">
+                                    <strong>Order NOW!</strong>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </header>
+    <main>
+        <!-- section to start the img carousel from bulma -->
+        <section class="hero is-medium has-carousel">
+            <!-- Start of carousel -->
+            <div id="carousel-demo" class="hero-carousel">
+                <div class="item-1">
+                    <img src="https://foodish-api.com/images/pizza/pizza47.jpg">
+                </div>
+                <div class="item-2">
+                    <img src="https://foodish-api.com/images/pizza/pizza16.jpg">
+                </div>
+                <div class="item-3">
+                    <img src="https://foodish-api.com/images/pizza/pizza3.jpg">
+                </div>
+                <div class="item-4">
+                    <img src="https://foodish-api.com/images/pizza/pizza56.jpg">
+                </div>
+                <div class="item-5">
+                    <img src="https://foodish-api.com/images/pizza/pizza50.jpg">
+                </div>
+                <div class="item-6">
+                    <img src="https://foodish-api.com/images/pizza/pizza89.jpg">
+                </div>
+                <div class="item-7">
+                    <img src="https://foodish-api.com/images/pizza/pizza85.jpg">
+                </div>
+                <div class="item-8">
+                    <img src="https://foodish-api.com/images/pizza/pizza75.jpg">
+                </div>
+            </div>
+            <div class="hero-head"></div>
+            <div class="hero-body"></div>
+            <div class="hero-foot"></div>
+            <!-- End of carousel -->
+        </section>
+        <!-- section for a calendar to update based on holiday hours -->
+        <section id="calendar">
+        </section>
+        <!-- section to add different store locations -->
+        <section id="places-and-times">
+            <ul id="locations">
+                <h2>Try out Our Locations!</h2>
+                <li>4423 NC-150, Lexington, NC</li>
+                <li>2107 NC-54, Durham, NC</li>
+                <li>Tarrymore Square Shopping Ctr, 4011 Capital Blvd, Raleigh, NC</li>
+                <li>838 S Main St, Kernersville, Kernersville, NC</li>
+                <li>3710 Peppermill Dr, Wilson, NC</li>
+            </ul>
+            <ul id="times">
+                <h2>Hours of Operation</h2>
+                <li>Sunday: 10:30 am - 11:00 pm</li>
+                <li>Monday: 10:30 am - 11:00 pm</li>
+                <li>Tuesday: 10:30 am - 11:00 pm</li>
+                <li>Wednesday: 10:30 am - 11:00 pm</li>
+                <li>Thursday: 10:30 am - 11:00 pm</li>
+                <li>Friday: 10:30 am - 11:00 pm</li>
+                <li>Saturday: 10:30 am - 11:00 pm</li>
+            </ul>
+        </section>
+        <!-- section to add the social media accounts -->
+        <section id="social-accounts">
+            <h2>Check Out our Social Media!</h2>
+            <section id="icons">
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://www.twitter.com/"><i class="fa-brands fa-square-x-twitter"></i></a>
+            <a href="https://www.snapchat.com/"><i class="fa-brands fa-square-snapchat"></i></a>
+            </section>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    <script src="https://kit.fontawesome.com/a095df79ba.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+    <script src="./assets/js/home.js"></script>
+</body>
+
+</html>
