@@ -12,6 +12,10 @@ body {
 
 #order4 {
   background-color: #ff3860;
+  font-size:40px;
+  font-style: oblique;
+  letter-spacing: 10px;
+  text-decoration: underline;
 }
 
 .box {
@@ -39,7 +43,7 @@ body {
   text-align: center;
   border-radius: 20px;
   background-color: #78D37F;
-  height: 40px;
+  
 }
 
 .title.is-4 {
