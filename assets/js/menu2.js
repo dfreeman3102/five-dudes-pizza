@@ -2,9 +2,9 @@
 //sets storage for order
 
 
-localStorage.setItem("order", JSON.stringify(order));
+// localStorage.setItem("order", JSON.stringify(order));
 // element variables
-const vegNutBtn = document.getElementById('veggie-nutrition-btn')
+const vegNutBtn = document.getElementById('veggie-nutrition-btn2')
 const meatNutBtn = document.getElementById('meat-nutrition-btn')
 const supNutBtn = document.getElementById('supreme-nutrition-btn')
 const hawNutBtn = document.getElementById('hawaiian-nutrition-btn')
@@ -32,6 +32,7 @@ const vegBtn = document.getElementById('veg-btn')
 const meatBtn = document.getElementById('meat-btn')
 const supBtn = document.getElementById('sup-btn')
 const hawBtn = document.getElementById('haw-btn')
+
 const orderedItems = JSON.parse(localStorage.getItem('orders') || '[]' )
 const margTitle = document.getElementById('marg-title')
 const margPrice = document.getElementById('margherita-price')
@@ -44,9 +45,8 @@ var margherita = {
   foodItem: "margherita",
   itemPrice: 16,
 };
-
 orderedItems.push(margherita)
-localStorage.setItem("order", JSON,stringify(orderedItems))
+localStorage.setItem("order", JSON.stringify(orderedItems))
 }
 
 // script for bulma modal
@@ -129,12 +129,10 @@ document.addEventListener('DOMContentLoaded', () => {
 // };
 // api.analyzeRecipe(analyzeRecipeRequest, opts, callback);
 
-const apiKey = "41342be6e3224906b0a5512ceb92ef9e"
+const apiKey = "a2250ec5ab8e4ec7bcf5935f815068a3"
 
-
-// "a2250ec5ab8e4ec7bcf5935f815068a3"
 // "aa6cfeb66b1c442aa09657728a431c94"
-
+// "41342be6e3224906b0a5512ceb92ef9e"
 
 
 // "0bd84def3a95469c8cc5ddc3c2736a4e"
