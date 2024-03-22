@@ -9,13 +9,17 @@
 body {
   box-sizing: border-box;
 }
-
+#checkout-container {
+  background-color: #78D37F;
+}
 #order4 {
   background-color: #ff3860;
   font-size:40px;
   font-style: oblique;
   letter-spacing: 10px;
   text-decoration: underline;
+  font-weight: bolder;
+  
 }
 
 .box {
@@ -23,14 +27,7 @@ body {
   border-radius: 10px;
 }
 
-.wordStyle {
-  font: bold;
-}
 
-.button.is-info {
-  font-weight: bold;
-  
-}
 
 #pizza-title {
   background-color: #ff3860;

@@ -59,16 +59,18 @@
   </div>
   <!-- This will hold the totals for the order and the checkout -->
   <section>
-    <div id="checkout-container" class="container box ">
-      <ul id="orderList">
+    <div id="checkout-container" class="container box column ">
+      <ul id="orderList" class="column box is-5">
 
       </ul>
-      <div>Subtotal:<span id="subtotal"></span></div>
-      <div>Sales Tax:<span id="sales-tax"></span></div>
-      <!-- will take some work to implement tip calculator -->
-      <!-- <div>Tip:<input id="tip-input"></input></div>  -->
-      <h3>Total:<span id="total"></span></h3>
-      <div id="place-order"><button id="place-order-button" class="button is-success" type="submit">Place Order</button>
+      <div class="box column is-3">
+        <div>Subtotal:<span id="subtotal"></span></div>
+        <div>Sales Tax:<span id="sales-tax"></span></div>
+        <!-- will take some work to implement tip calculator -->
+        <!-- <div>Tip:<input id="tip-input"></input></div>  -->
+        <h3>Total:<span id="total"></span></h3>
+      </div>
+      <div id="place-order" class="column"><button id="place-order-button" class="button is-danger" type="submit">Place Order</button>
       </div>
     </div>
   </section>
