@@ -10,7 +10,9 @@ body {
   box-sizing: border-box;
 }
 
-
+#order4 {
+  background-color: #ff3860;
+}
 
 .box {
   border: 2px solid black;
@@ -48,12 +50,6 @@ body {
   padding: 5px;
   width: 200px;
 
-}
-
-
-
-#box-style {
-  width: 600px;
 }
 
 .column.is-4 {
