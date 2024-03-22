@@ -1,8 +1,8 @@
 
 //sets storage for order
-var order = ["Pepperoni", "Cheese", "Supreme", "Meat Lovers"];
-localStorage.setItem("order", JSON.stringify(order));
 
+
+localStorage.setItem("order", JSON.stringify(order));
 // element variables
 const vegNutBtn = document.getElementById('veggie-nutrition-btn')
 const meatNutBtn = document.getElementById('meat-nutrition-btn')
@@ -24,6 +24,30 @@ const vegProEl = document.getElementById('veggie-protein')
 const meatProEl = document.getElementById('meat-protein')
 const supProEl = document.getElementById('supreme-protein')
 const hawProEl = document.getElementById('hawaiian-protein')
+
+const margBtn = document.getElementById('marg-btn')
+const marBtn = document.getElementById('mar-btn')
+const pepBtn = document.getElementById('pep-btn')
+const vegBtn = document.getElementById('veg-btn')
+const meatBtn = document.getElementById('meat-btn')
+const supBtn = document.getElementById('sup-btn')
+const hawBtn = document.getElementById('haw-btn')
+const orderedItems = JSON.parse(localStorage.getItem('orders') || '[]' )
+const margTitle = document.getElementById('marg-title')
+const margPrice = document.getElementById('margherita-price')
+
+
+margBtn.addEventListener('click', orderMarg)
+function orderMarg(e){
+  e.preventDefault()
+var margherita = {
+  foodItem: "margherita",
+  itemPrice: 16,
+};
+
+orderedItems.push(margherita)
+localStorage.setItem("order", JSON,stringify(orderedItems))
+}
 
 // script for bulma modal
 document.addEventListener('DOMContentLoaded', () => {
@@ -105,7 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // };
 // api.analyzeRecipe(analyzeRecipeRequest, opts, callback);
 
-// const apiKey = "41342be6e3224906b0a5512ceb92ef9e"
+const apiKey = "41342be6e3224906b0a5512ceb92ef9e"
+
 
 // "a2250ec5ab8e4ec7bcf5935f815068a3"
 // "aa6cfeb66b1c442aa09657728a431c94"
