@@ -20,10 +20,16 @@ body {
 
 .box {
   border: 2px solid black;
-  border-radius: 5px;
+  border-radius: 10px;
+}
 
+.wordStyle {
+  font: bold;
+}
 
-
+.button.is-info {
+  font-weight: bold;
+  
 }
 
 #pizza-title {

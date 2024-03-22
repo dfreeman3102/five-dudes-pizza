@@ -20,6 +20,7 @@ function displayOrder() {
         var buttonEl = document.createElement("button");
         buttonEl.textContent = item; //makes a button for each item within the order array
         listEl.appendChild(buttonEl); //appends it to make it appear
+        buttonEl.setAttribute("class", "button is-info", "id", "orderButton")
     });
 }
 
