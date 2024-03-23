@@ -11,15 +11,12 @@ body {
 }
 
 .container {
-  border: 1px solid black
+  border: 1px solid black;
 }
 
 .box {
   border: 2px solid black;
   border-radius: 5px;
-
-
-
 }
 
 #pizza-title {
@@ -28,7 +25,6 @@ body {
   border-radius: 20px;
   height: 55px;
   font-style: oblique;
-
 }
 
 #pizza-info {
@@ -38,21 +34,18 @@ body {
 .title.is-3 {
   text-align: center;
   border-radius: 20px;
-  background-color: #78D37F;
+  background-color: #78d37f;
   height: 40px;
 }
 
 .title.is-4 {
   /*Categories for menu*/
   border-radius: 20px;
-  background-color: #78D37F;
+  background-color: #78d37f;
   height: 40px;
   padding: 5px;
   width: 200px;
-
 }
-
-
 
 #box-style {
   width: 600px;
@@ -72,8 +65,6 @@ body {
   border-color: black;
   padding: 0px;
   margin: 0px;
-
-
 }
 
 .pizza.is-flex-direction-row {
@@ -84,7 +75,6 @@ body {
   border: 10px;
   text-align: left;
   flex-wrap: wrap;
-
 }
 
 /* homepage start*/
@@ -100,7 +90,7 @@ body {
 #places-and-times {
   display: flex;
   flex-wrap: wrap;
-  background: red;
+  background: #ee1d52;
   color: white;
 }
 
@@ -117,7 +107,7 @@ h2 {
 }
 
 #social-accounts {
-  background: red;
+  background: #ee1d52;
 }
 
 #icons {
@@ -133,13 +123,13 @@ i {
 }
 
 .fa-square-facebook {
-  background: #316FF6;
+  background: #316ff6;
   color: white;
   border-radius: 20px;
 }
 
 .fa-tiktok {
-  background: linear-gradient(#69C9D0, #EE1D52);
+  background: linear-gradient(#69c9d0, #ee1d52);
   color: white;
   border-radius: 20px;
 }
@@ -157,14 +147,12 @@ i {
 }
 
 .fa-square-snapchat {
-  color: #FFFC00;
+  color: #fffc00;
   background: black;
   border-radius: 20px;
 }
 
 @media screen and (max-width: 425px) {
-
-
   #calendar {
     font-size: 15px;
   }
@@ -179,3 +167,35 @@ i {
 }
 
 /* homepage end */
+/* Order Start */
+#order-container h2 {
+  color: white;
+  background: #ee1d52;
+  font-size: 35px;
+}
+#order-container {
+  border: none;
+}
+.order {
+  font-size: 25px;
+  padding: 10px;
+}
+#checkout-container {
+  padding: 10px;
+  width: 50%;
+  background: #78d37f;
+}
+.pre-tax,
+.tax {
+  font-size: 20px;
+}
+.post-tax {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+}
+#place-order {
+  display: flex;
+  justify-content: center;
+}
+/* Order End */
