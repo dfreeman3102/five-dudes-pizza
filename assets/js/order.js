@@ -96,12 +96,15 @@ getTotal()
 
 placeOrderBtn.addEventListener('click', placeOrder)
 
-function placeOrder () {
-alert("Your order has been placed")
-localStorage.clear()
-location.reload()
+function placeOrder() {
+    if (orderedItems2.length < 1) {
+        location.reload()
+    } else {
+        alert("Your order has been placed")
+        localStorage.clear()
+        location.reload()
+    }
 }
-  
-  
 
-  
+
+
