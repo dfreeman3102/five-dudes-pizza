@@ -10,6 +10,8 @@ const subtotalEl = document.getElementById('subtotal')
 const salesTaxEl = document.getElementById('sales-tax')
 const totalEl = document.getElementById('total')
 const placeOrderBtn = document.getElementById('place-order-button')
+const removeBtn = document.querySelector('remove-btn')
+const resetBtn = document.getElementById('reset-order-button')
 
 
 
@@ -58,11 +60,32 @@ const placeOrderBtn = document.getElementById('place-order-button')
 
 // addToOrder(order);
 
+//   removeBtn.addEventListener('click', removeItem)
+resetBtn.addEventListener('click', removeItem)
+
+  function removeItem () {
+    localStorage.removeItem("order")
+    location.reload()
+}
+
+
 function displayOrder() {
     for (var i = 0; i < orderedItems2.length; i++) {
+// const removeItem = e => {
+//     const item = e.target.closest('.ordered-item');
+//     item.orderList.removeChild(item);
+//   };
+
+      
         let li = document.createElement('li')
+        // let removeBtn = document.createElement('button')
         li.textContent = orderedItems2[i].foodItem + " $" + orderedItems2[i].itemPrice
+        li.setAttribute('class', 'ordered-item')
+        // removeBtn.innerHTML = 'remove'
+        // removeBtn.setAttribute('class', 'remove-btn')
         orderList.appendChild(li)
+        // orderList.appendChild(removeBtn)
+        // removeBtn.addEventListener('click', removeItem)
     }
 }
 
