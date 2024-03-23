@@ -10,6 +10,13 @@ var ingred = ["Pepperoni", "mozzarella", " marinara sauce"];
 var ingred2 = ["basil", "mozzarella", " marinara sauce", "olive oil"];
 var ingred3 = ["Marinara sauce", "sliced garlic", "olive oil"];
 
+const margNutBtn = document.getElementById('margherita-nutrition-btn')
+const marNutBtn = document.getElementById('marinara-nutrition-btn')
+const pepNutBtn = document.getElementById('pepperoni-nutrition-btn')
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   // Functions to open and close a modal
   function openModal($el) {
@@ -57,7 +64,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-function getPizza() {
+
+
+// function getPizza() {
+  pepNutBtn.addEventListener('click', getPepperoni)
+  function getPepperoni(){
   for (var i = 0; i < ingred.length; i++) {
     var requestUrl =
       "https://api.edamam.com/api/nutrition-data?app_id=0c38d0e3&app_key=8241c4d9f09fe6602cc3d627c6bfca33&nutrition-type=logging&ingr=" +
@@ -84,12 +95,16 @@ function getPizza() {
           " Total Fat: " +
           totalFat +
           "g " +
-          " Total Protien: " +
+          " Total Protein: " +
           totalProtein +
           "g";
       });
   }
+}
 
+
+  margNutBtn.addEventListener('click', getMargherita)
+  function getMargherita() {
   for (var i = 0; i < ingred2.length; i++) {
     var requestUrl =
       "https://api.edamam.com/api/nutrition-data?app_id=0c38d0e3&app_key=8241c4d9f09fe6602cc3d627c6bfca33&nutrition-type=logging&ingr=" +
@@ -116,11 +131,15 @@ function getPizza() {
           " Total Fat: " +
           totalFat +
           "g " +
-          " Total Protien: " +
+          " Total Protein: " +
           totalProtein +
           "g";
       });
   }
+}
+marNutBtn.addEventListener('click', getMarinara)
+function getMarinara() {
+
   for (var i = 0; i < ingred3.length; i++) {
     var requestUrl =
       "https://api.edamam.com/api/nutrition-data?app_id=0c38d0e3&app_key=8241c4d9f09fe6602cc3d627c6bfca33&nutrition-type=logging&ingr=" +
@@ -147,7 +166,7 @@ function getPizza() {
           " Total Fat: " +
           totalFat +
           "g " +
-          " Total Protien: " +
+          " Total Protein: " +
           totalProtein +
           "g";
       });
