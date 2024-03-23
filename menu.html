@@ -50,16 +50,17 @@
     <!-- Menu Banner? -->
     <main>
         <h1 class="title is-1" id="pizza-title">Pizzas</h1>
+
         <div id="classic-pizzas">
             <h2 class="title is-3" id="classic">Classic Pizzas</h2>
             <section class="pizza tile is-ances">
-                
+
                 <div class="margherita is-4">
                     <h3 id="marg-title" class="box title is-4 ">Margherita</h3>
                     <img src="https://foodish-api.com/images/pizza/pizza1.jpg" alt="margherita pizza" class="pizza-pic">
                     <div id="box-style" class="box">
                         <div class="price">
-                            <p id="pizza-info">Price:$<span id="margherita-price">16</span></p>
+                            <p id="pizza-info">Price: $16<span id="margherita-price"></span></p>
                         </div>
                         <p id="pizza-info">Description: <span id="margherita-desc">Marinara sauce with fresh mozzarella,
                                 basil, and olive oil</span></p>
@@ -69,21 +70,17 @@
                             <div class="modal-content">
 
                                 <header class="modal-card-head">
-                                    <p class="modal-card-title">margherita Pizza nutritional Info</p>
-                                    </header>
-                                    <section class="modal-card-body" id="margherita-nutrition1">
-                                        
-                                      </section>
+                                    <p class="modal-card-title">Margherita Pizza Nutritional Info</p>
+                                </header>
+                                <section class="modal-card-body" id="margherita-nutrition1">
 
-                                
+                                </section>
                             </div>
                             <button class="modal-close is-large" aria-label="close"></button>
-                            </div>
-                            <button class="js-modal-trigger" data-target="margherita-modal">
+                        </div>
+                        <button id="margherita-nutrition-btn" class="js-modal-trigger" data-target="margherita-modal">
                             Nutrition Info
-                            </button>
-
-                        
+                        </button>
                         <div class=addOrder>
                             <button id="marg-btn" class="button is-danger"> Add to Order</button>
                         </div>
@@ -105,27 +102,16 @@
                             <div class="modal-content">
 
                                 <header class="modal-card-head">
-                                    <p class="modal-card-title">Marinara Pizza nutritional Info</p>
-                                    </header>
-                                    <section class="modal-card-body" id="marinara-nutrition1">
-                                        
-                                      </section>
-
-                                
+                                    <p class="modal-card-title">Marinara Pizza Nutritional Info</p>
+                                </header>
+                                <section class="modal-card-body" id="marinara-nutrition1">
+                                </section>
                             </div>
                             <button class="modal-close is-large" aria-label="close"></button>
-                            </div>
-                            <button class="js-modal-trigger" data-target="marinara-modal">
+                        </div>
+                        <button id="marinara-nutrition-btn" class="js-modal-trigger" data-target="marinara-modal">
                             Nutrition Info
-                            </button>
-
-
-
-
-
-
-
-
+                        </button>
                         <div class=addOrder>
                             <button id='mar-btn' class="button is-danger"> Add to Order</button>
                         </div>
@@ -139,7 +125,7 @@
                         <div class="price">
                             <p id="pizza-info">Price: $17<span id="pepperoni-price"></span></p>
                         </div>
-                        <p id="pizza-info">Description: Marinara sauce with pepperoni and fresh mozzarella<span
+                        <p id="pizza-info">Description: Marinara sauce with shredded mozzarella and pepperoni<span
                                 id="pepperoni-desc"></span></p>
                         <div id="pepperoni-nutrition"></div>
 
@@ -148,135 +134,179 @@
                             <div class="modal-content">
 
                                 <header class="modal-card-head">
-                                    <p class="modal-card-title">Pepperoni</p>
-                                    </header>
-                                    <section class="modal-card-body" id="pepperoni-nutrition1">
-                                        
-                                      </section>
-
-                                
+                                    <p class="modal-card-title">Pepperoni Pizza Nutritional Info</p>
+                                </header>
+                                <section class="modal-card-body" id="pepperoni-nutrition1">
+                                </section>
                             </div>
                             <button class="modal-close is-large" aria-label="close"></button>
-                            </div>
-                            <button class="js-modal-trigger" data-target="pepperoni-modal">
+                        </div>
+                        <button id="pepperoni-nutrition-btn" class="js-modal-trigger" data-target="pepperoni-modal">
                             Nutrition Info
-                            </button>
+                        </button>
 
-
-
-
-                        
                         <div class=addOrder>
                             <button id="pep-btn" class="button is-danger"> Add to Order</button>
-                        
-                            
                         </div>
                     </div>
                 </div>
             </section>
+        </div>
 
+        <div id="specialty-pizzas">
             <h2 class="title is-3">Specialty Pizzas</h2>
-            <section>
-                <div id="specialty-pizzas" class="pizza is-flex">
-                    <div class="veggie">
-                        <h3 class="box title is-4">Veggie Pizza</h3>
-                        <img src="https://foodish-api.com/images/pizza/pizza62.jpg" alt="veggie pizza"
-                            class="pizza-pic">
-                        <div id="box-style" class="box">
-                            <div class="price">
-                                <p id="pizza-info">Price: $19<span id="veggie-price"></span></p>
-                            </div>
-                            <p id="pizza-info">Description: <span id="veggie-desc">Marinara sauce with shredded
-                                    mozzarella, mushrooms, bell peppers, onions, and black olives</span></p>
-                            <button id="veggie-nutrition-btn">Get Nutrition</button>
+            <section class="pizza tile is-ances">
 
+                <div class="veggie">
+                    <h3 class="box title is-4">Veggie</h3>
+                    <img src="https://foodish-api.com/images/pizza/pizza62.jpg" alt="veggie pizza" class="pizza-pic">
+                    <div id="box-style" class="box">
+                        <div class="price">
+                            <p id="pizza-info">Price: $19<span id="veggie-price"></span></p>
+                        </div>
+                        <p id="pizza-info">Description: <span id="veggie-desc">Marinara sauce with shredded mozzarella,
+                                mushrooms, bell peppers, onions, and black olives</span></p>
+
+                        <div id="veggie-nutrition-container">
+                            <button class="modal-close is-large" aria-label="close"></button>
+                            <button id="veggie-nutrition-btn" class="js-modal-trigger"
+                                data-target="veggie-modal">Nutrition Info</button>
                             <div id="veggie-modal" class="modal">
-                            <div class="modal-background"></div>
-                            <div class="modal-content">
-                           <p>Nutrition Info</p>
+                                <div class="modal-background"></div>
+                                <div class="modal-content">
+                                    <header class="modal-card-head">
+                                        <p class="modal-card-title">Veggie Pizza Nutritional Info</p>
+                                    </header>
+                                    <section class="modal-card-body" id="veggie-nutrition">
+                                        <div id="veggie-calories"></div>
+                                        <div id="veggie-fat"></div>
+                                        <div id="veggie-protein"></div>
+                                    </section>
+                                </div>
+                            </div>
+                            <button class="modal-close is-large" aria-label="close"></button>
+                        </div>
+                        <!-- <button id="veggie-nutrition-btn">
+                                Nutrition Info
+                            </button> -->
 
-                            <div id="veggie-nutrition">
-                                <div id="veggie-calories"></div>
-                                <div id="veggie-fat"></div>
-                                <div id="veggie-protein"></div>
-                            </div>
-                            </div>
-                                    <button class="modal-close is-large" aria-label="close"></button>
-                                  </div>
-                                  <button id="veggie-nutrition-btn" class="js-modal-trigger" data-target="veggie-modal">
-                                    Nutrition Info
-                                  </button>
-
-                            <div class=addOrder>
-                                <button id="veg-btn" class="button is-danger"> Add to Order</button>
-                            </div>
+                        <div class=addOrder>
+                            <button id="veg-btn" class="button is-danger"> Add to Order</button>
                         </div>
                     </div>
+                </div>
 
-                    <div class="meat-lovers">
-                        <h3 class="box title is-4">Meat Lovers</h3>
-                        <img src="https://foodish-api.com/images/pizza/pizza45.jpg" class="pizza-pic">
-                        <div id="box-style" class="box">
-                            <div class="price">
-                                <p id="pizza-info">Price: $21<span id="meat-lovers-price"></span></p>
-                            </div>
-                            <p id="pizza-info">Description: <span id="meat-lovers-desc">Marinara sauce with shredded
-                                    mozzarella, sausage, pepperoni, and bacon</span></p>
-                            <button id="meat-nutrition-btn">Get Nutrition</button>
-                            <div id="meat-nutrition">
-                                <div id="meat-calories"></div>
-                                <div id="meat-fat"></div>
-                                <div id="meat-protein"></div>
+                <div class="meat-lovers">
+                    <h3 class="box title is-4">Meat Lovers</h3>
+                    <img src="https://foodish-api.com/images/pizza/pizza45.jpg" class="pizza-pic">
+                    <div id="box-style" class="box">
+                        <div class="price">
+                            <p id="pizza-info">Price: $21<span id="meat-lovers-price"></span></p>
+                        </div>
+                        <p id="pizza-info">Description: <span id="meat-lovers-desc">Marinara sauce with shredded
+                                mozzarella, sausage, pepperoni, ham, and bacon</span></p>
+                        <!-- <button id="meat-nutrition-btn">Get Nutrition</button> -->
+                        <div id="meat-nutrition-container">
+                            <button class="modal-close is-large" aria-label="close"></button>
+                            <button id="meat-nutrition-btn" class="js-modal-trigger" data-target="meat-modal">Nutrition
+                                Info</button>
+                            <div id="meat-modal" class="modal">
+                                <div class="modal-background"></div>
+                                <div class="modal-content">
+                                    <header class="modal-card-head">
+                                        <p class="modal-card-title">Meat Lovers Pizza Nutritional Info</p>
+                                    </header>
+                                    <section class="modal-card-body" id="meat-nutrition">
+                                        <div id="meat-calories"></div>
+                                        <div id="meat-fat"></div>
+                                        <div id="meat-protein"></div>
+                                    </section>
+                                </div>
+                                <button class="modal-close is-large" aria-label="close"></button>
                             </div>
                             <div class=addOrder>
                                 <button id="meat-btn" class="button is-danger"> Add to Order</button>
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+            <section>
+                <div class="supreme">
+                    <h3 class="box title is-4">Supreme</h3>
+                    <img src="https://foodish-api.com/images/pizza/pizza37.jpg" class="pizza-pic">
+                    <div id="box-style" class="box">
+                        <div class="price">
+                            <p id="pizza-info">Price: $22<span id="supreme-price"></span></p>
+                        </div>
+                        <p id="pizza-info">Description: <span id="supreme-desc">Marinara sauce with shredded
+                                mozzarella, bell pepper, black olives, onions, pepperoni, and sausage</span></p>
+                        <!-- <button id="supreme-nutrition-btn">Get Nutrition</button> -->
 
-                    <div class="supreme">
-                        <h3 class="box title is-4">Supreme Pizza</h3>
-                        <img src="https://foodish-api.com/images/pizza/pizza37.jpg" class="pizza-pic">
-                        <div id="box-style" class="box">
-                            <div class="price">
-                                <p id="pizza-info">Price: $22<span id="supreme-price"></span></p>
-                            </div>
-                            <p id="pizza-info">Description: <span id="supreme-desc">Marinara sauce with shredded
-                                    mozzarella, bell pepper, black olives, onions, pepperoni, and sausage</span></p>
-                            <button id="supreme-nutrition-btn">Get Nutrition</button>
-                            <div id="supreme-nutrition">
-                                <div id="supreme-calories"></div>
-                                <div id="supreme-fat"></div>
-                                <div id="supreme-protein"></div>
+                        <div id="supreme-nutrition-container">
+                            <button class="modal-close is-large" aria-label="close"></button>
+                            <button id="supreme-nutrition-btn" class="js-modal-trigger"
+                                data-target="supreme-modal">Nutrition Info</button>
+                            <div id="supreme-modal" class="modal">
+                                <div class="modal-background"></div>
+                                <div class="modal-content">
+                                    <header class="modal-card-head">
+                                        <p class="modal-card-title">Supreme Pizza Nutritional Info</p>
+                                    </header>
+                                    <section class="modal-card-body" id="supreme-nutrition">
+                                        <div id="supreme-calories"></div>
+                                        <div id="supreme-fat"></div>
+                                        <div id="supreme-protein"></div>
+                                    </section>
+                                </div>
+                                <button class="modal-close is-large" aria-label="close"></button>
                             </div>
                             <div class=addOrder>
                                 <button id="sup-btn" class="button is-danger"> Add to Order</button>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="hawaiian">
-                        <h3 class="box title is-4">Hawaiian</h3>
-                        <img src="https://foodish-api.com/images/pizza/pizza48.jpg" alt="Hawaiian pizza"
-                            class="pizza-pic">
-                        <div id="box-style" class="box">
-                            <div class="price">
-                                <p id="pizza-info">Price: $19<span id="hawaiian-price"></span></p>
-                            </div>
-                            <p id="pizza-info">Description: <span id="hawaiian-desc">Olive oil with shredded mozzarella,
-                                    pineapple, ham, and bacon</span></p>
-                            <button id="hawaiian-nutrition-btn">Get Nutrition</button>
-                            <div id="hawaiian-nutrition">
-                                <div id="hawaiian-calories"></div>
-                                <div id="hawaiian-fat"></div>
-                                <div id="hawaiian-protein"></div>
+                <div class="hawaiian">
+                    <h3 class="box title is-4">Hawaiian</h3>
+                    <img src="https://foodish-api.com/images/pizza/pizza48.jpg" alt="Hawaiian pizza" class="pizza-pic">
+                    <div id="box-style" class="box">
+                        <div class="price">
+                            <p id="pizza-info">Price: $19<span id="hawaiian-price"></span></p>
+                        </div>
+                        <p id="pizza-info">Description: <span id="hawaiian-desc">Olive oil with shredded
+                                mozzarella, pineapple, ham, and bacon</span></p>
+                        <!-- <button id="hawaiian-nutrition-btn">Get Nutrition</button>
+                                         -->
+                        <div id="hawaiian-nutrition-container">
+                            <button class="modal-close is-large" aria-label="close"></button>
+                            <button id="hawaiian-nutrition-btn" class="js-modal-trigger"
+                                data-target="hawaiian-modal">Nutrition Info</button>
+                            <div id="hawaiian-modal" class="modal">
+                                <div class="modal-background"></div>
+                                <div class="modal-content">
+                                    <header class="modal-card-head">
+                                        <p class="modal-card-title">Hawaiian Pizza Nutritional Info
+                                        </p>
+                                    </header>
+                                    <section class="modal-card-body" id="hawaiian-nutrition">
+                                        <div id="hawaiian-calories"></div>
+                                        <div id="hawaiian-fat"></div>
+                                        <div id="hawaiian-protein"></div>
+                                    </section>
+                                </div>
                             </div>
                             <div class=addOrder>
                                 <button id="haw-btn" class="button is-danger"> Add to Order</button>
                             </div>
                         </div>
                     </div>
-                    <!-- 
+                </div>
+            </section>
+        </div>
+
+        <!-- 
                     <div class="bbq-chicken">
                         <h3>BBQ Chicken</h3>
                         <img src="" alt="bbq chicken pizza" class="pizza-pic">
@@ -290,7 +320,7 @@
                         </div>
                     </div> -->
 
-                    <!-- <div class="buffalo-chicken">
+        <!-- <div class="buffalo-chicken">
                         <h3>Buffalo Chicken</h3>
                         <img src="" alt="buffalo chicken pizza" class="pizza-pic">
                         <div class="price">
@@ -317,9 +347,9 @@
                     </div> -->
 
 
-            </section>
+        <!-- </section> -->
 
-            <!-- <div id="byo-pizzas">
+        <!-- <div id="byo-pizzas">
             <h2>Build Your Own Pizzas</h2>
 
             <div class="byo">
