@@ -33,89 +33,89 @@ const meatBtn = document.getElementById('meat-btn')
 const supBtn = document.getElementById('sup-btn')
 const hawBtn = document.getElementById('haw-btn')
 
-const orderedItems = JSON.parse(localStorage.getItem('orders') || '[]' )
+const orderedItems = JSON.parse(localStorage.getItem('orders') || '[]')
 const margTitle = document.getElementById('marg-title')
 const margPrice = document.getElementById('margherita-price')
 
 // adds pizzas to order page
 margBtn.addEventListener('click', orderMarg)
-function orderMarg(e){
+function orderMarg(e) {
   e.preventDefault()
-var margherita = {
-  foodItem: "Margherita",
-  itemPrice: 16,
-};
-orderedItems.push(margherita)
-localStorage.setItem("order", JSON.stringify(orderedItems))
+  var margherita = {
+    foodItem: "Margherita",
+    itemPrice: 16,
+  };
+  orderedItems.push(margherita)
+  localStorage.setItem("order", JSON.stringify(orderedItems))
 }
 
 marBtn.addEventListener('click', orderMar)
-function orderMar(e){
+function orderMar(e) {
   e.preventDefault()
-var marinara = {
-  foodItem: "Marinara",
-  itemPrice: 14,
-};
-orderedItems.push(marinara)
-localStorage.setItem("order", JSON.stringify(orderedItems))
+  var marinara = {
+    foodItem: "Marinara",
+    itemPrice: 14,
+  };
+  orderedItems.push(marinara)
+  localStorage.setItem("order", JSON.stringify(orderedItems))
 }
 
 pepBtn.addEventListener('click', orderPep)
-function orderPep(e){
+function orderPep(e) {
   e.preventDefault()
-var pepperoni = {
-  foodItem: "Pepperoni",
-  itemPrice: 17,
-};
-orderedItems.push(pepperoni)
-localStorage.setItem("order", JSON.stringify(orderedItems))
+  var pepperoni = {
+    foodItem: "Pepperoni",
+    itemPrice: 17,
+  };
+  orderedItems.push(pepperoni)
+  localStorage.setItem("order", JSON.stringify(orderedItems))
 }
 
 vegBtn.addEventListener('click', orderVeg)
-function orderVeg(e){
+function orderVeg(e) {
   e.preventDefault()
-var veggie = {
-  foodItem: "Veggie",
-  itemPrice: 19,
-};
-orderedItems.push(veggie)
-localStorage.setItem("order", JSON.stringify(orderedItems))
+  var veggie = {
+    foodItem: "Veggie",
+    itemPrice: 19,
+  };
+  orderedItems.push(veggie)
+  localStorage.setItem("order", JSON.stringify(orderedItems))
 }
 
 
 meatBtn.addEventListener('click', orderMeat)
-function orderMeat(e){
+function orderMeat(e) {
   e.preventDefault()
-var meat = {
-  foodItem: "Meat",
-  itemPrice: 21,
-};
-orderedItems.push(meat)
-localStorage.setItem("order", JSON.stringify(orderedItems))
+  var meat = {
+    foodItem: "Meat",
+    itemPrice: 21,
+  };
+  orderedItems.push(meat)
+  localStorage.setItem("order", JSON.stringify(orderedItems))
 }
 
 
 supBtn.addEventListener('click', orderSup)
-function orderSup(e){
+function orderSup(e) {
   e.preventDefault()
-var supreme = {
-  foodItem: "Supreme",
-  itemPrice: 22,
-};
-orderedItems.push(supreme)
-localStorage.setItem("order", JSON.stringify(orderedItems))
+  var supreme = {
+    foodItem: "Supreme",
+    itemPrice: 22,
+  };
+  orderedItems.push(supreme)
+  localStorage.setItem("order", JSON.stringify(orderedItems))
 }
 
 
 hawBtn.addEventListener('click', orderHaw)
-function orderHaw(e){
+function orderHaw(e) {
   e.preventDefault()
-var hawaiian = {
-  foodItem: "Hawaiian",
-  itemPrice: 19,
-};
-orderedItems.push(hawaiian)
-localStorage.setItem("order", JSON.stringify(orderedItems))
+  var hawaiian = {
+    foodItem: "Hawaiian",
+    itemPrice: 19,
+  };
+  orderedItems.push(hawaiian)
+  localStorage.setItem("order", JSON.stringify(orderedItems))
 }
 
 
@@ -281,7 +281,7 @@ function getNutrition() {
     .then(function (data) {
 
       crustCalories = parseFloat(data.nutrition.nutrients[10].amount) * 50
-      crustFat =parseFloat(data.nutrition.nutrients[25].amount)
+      crustFat = parseFloat(data.nutrition.nutrients[25].amount)
       crustProtein = parseFloat(data.nutrition.nutrients[16].amount)
       console.log(data)
 
@@ -434,97 +434,107 @@ function getNutrition() {
 vegNutBtn.addEventListener('click', getVeggieNutrition)
 
 function getVeggieNutrition() {
-  // let veggieCalories
-  // fetch(crustNutritionUrl)
-  //   .then(function (results) {
-  //     return results.json();
-  //   })
-  //   .then(function (data) {
-  //     crustCalories = parseFloat(data.nutrition.nutrients[10].amount) * 50
-  //     crustFat = data.nutrition.nutrients[25].amount
-  //     crustProtein = data.nutrition.nutrients[16].amount
-  //     console.log(crustCalories)
-  //     veggieCalories += parseFloat(crustCalories)
-  //     // *50
-  //         })
+  let veggieCalories
+  let veggieFat
+  let veggieProtein
+  fetch(crustNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      crustCalories = parseFloat(data.nutrition.nutrients[10].amount) * 50
+      crustFat = parseFloat(data.nutrition.nutrients[25].amount)
+      crustProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      veggieCalories += crustCalories
+      veggieFat += crustFat
+      veggieProtein += crustFat
 
-  // fetch(marinaraNutritionUrl)
-  //   .then(function (results) {
-  //     return results.json();
-  //   })
-  //   .then(function (data) {
-  //     marinaraCalories = parseFloat(data.nutrition.nutrients[10].amount) * 250
-  //     marinaraFat = parseFloat(data.nutrition.nutrients[25].amount)
-  //     marinaraProtein = parseFloat(data.nutrition.nutrients[16].amount)
-  //     console.log(marinaraCalories)
-  //     veggieCalories += marinaraCalories
-  //     // *250
-  //   })
+      // *50
+    })
 
-  // fetch(mozzNutritionUrl)
-  //   .then(function (results) {
-  //     return results.json();
-  //   })
-  //   .then(function (data) {
-  //     mozzCalories = parseFloat(data.nutrition.nutrients[10].amount) * 100
-  //     mozzFat = parseFloat(data.nutrition.nutrients[25].amount)
-  //     mozzProtein = parseFloat(data.nutrition.nutrients[16].amount)
-  //     console.log(mozzCalories)
-  //    veggieCalories += mozzCalories
-  //     // *100
-  //   })
+  fetch(marinaraNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      marinaraCalories = parseFloat(data.nutrition.nutrients[10].amount) * 250
+      marinaraFat = parseFloat(data.nutrition.nutrients[25].amount)
+      marinaraProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      veggieCalories += marinaraCalories
+      veggieFat += marinaraFat
+      veggieProtein += marinaraProtein
+      // *250
+    })
 
-  // fetch(mushroomNutritionUrl)
-  //   .then(function (results) {
-  //     return results.json();
-  //   })
-  //   .then(function (data) {
-  //     mushroomCalories = parseFloat(data.nutrition.nutrients[10].amount) * 3
-  //     mushroomFat = parseFloat(data.nutrition.nutrients[25].amount)
-  //     mushroomProtein = parseFloat(data.nutrition.nutrients[16].amount)
-  //     console.log(mushroomCalories)
-  //     veggieCalories += mushroomCalories
-  //     // *3
-  //   })
+  fetch(mozzNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      mozzCalories = parseFloat(data.nutrition.nutrients[10].amount) * 100
+      mozzFat = parseFloat(data.nutrition.nutrients[25].amount)
+      mozzProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      veggieCalories += mozzCalories
+      veggieFat += mozzFat
+      veggieProtein += mozzProtein
+      // *100
+    })
 
-  // fetch(bellNutritionUrl)
-  //   .then(function (results) {
-  //     return results.json();
-  //   })
-  //   .then(function (data) {
-  //     bellPepperCalories = parseFloat(data.nutrition.nutrients[10].amount) / 3
-  //     bellPepperFat = parseFloat(data.nutrition.nutrients[25].amount)
-  //     bellPepperProtein = parseFloat(data.nutrition.nutrients[16].amount)
-  //     console.log(bellPepperCalories)
-  //     veggieCalories += bellPepperCalories
-  //     // /3
-  //   })
-  // fetch(onionNutritionUrl)
-  //   .then(function (results) {
-  //     return results.json();
-  //   })
-  //   .then(function (data) {
-  //     onionCalories = parseFloat(data.nutrition.nutrients[10].amount) / 2
-  //     onionFat = parseFloat(data.nutrition.nutrients[25].amount)
-  //     onionProtein = parseFloat(data.nutrition.nutrients[16].amount)
-  //     console.log(onionCalories)
-  //     veggieCalories += onionCalories
-  //     // /2
-  //   })
-  // fetch(olivesNutritionUrl)
-  //   .then(function (results) {
-  //     return results.json();
-  //   })
-  //   .then(function (data) {
-  //     olivesCalories = parseFloat(data.nutrition.nutrients[10].amount) * 375
-  //     olivesFat = parseFloat(data.nutrition.nutrients[25].amount)
-  //     olivesProtein = parseFloat(data.nutrition.nutrients[16].amount)
-  //     console.log(olivesCalories)
-  //     veggieCalories += olivesCalories
-  //     // *375
-  //   })
+  fetch(mushroomNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      mushroomCalories = parseFloat(data.nutrition.nutrients[10].amount) * 3
+      mushroomFat = parseFloat(data.nutrition.nutrients[25].amount)
+      mushroomProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      veggieCalories += mushroomCalories
+      veggieFat += mushroomFat
+      veggieProtein += mushroomProtein
+      // *3
+    })
+
+  fetch(bellNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      bellPepperCalories = parseFloat(data.nutrition.nutrients[10].amount) / 3
+      bellPepperFat = parseFloat(data.nutrition.nutrients[25].amount)
+      bellPepperProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      veggieCalories += bellPepperCalories
+      veggieFat += bellPepperFat
+      veggieProtein += bellPepperProtein
+      // /3
+    })
+  fetch(onionNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      onionCalories = parseFloat(data.nutrition.nutrients[10].amount) / 2
+      onionFat = parseFloat(data.nutrition.nutrients[25].amount)
+      onionProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      veggieCalories += onionCalories
+      veggieFat += onionFat
+      veggieProtein += onionProtein
+      // /2
+    })
+  fetch(olivesNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      olivesCalories = parseFloat(data.nutrition.nutrients[10].amount) * 375
+      olivesFat = parseFloat(data.nutrition.nutrients[25].amount)
+      olivesProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      veggieCalories += olivesCalories
+      veggieFat += olivesFat
+      veggieProtein += olivesProtein
+      // *375
+    })
+
   // // veggieCalories += (crustCalories + marinaraCalories + mozzCalories + mushroomCalories + bellPepperCalories + onionCalories + olivesCalories)
-  // console.log(veggieCalories)
 
   vegCalEl.textContent = "Calories: 615"
   vegFatEl.textContent = "Fat: 26g"
@@ -534,6 +544,108 @@ function getVeggieNutrition() {
 meatNutBtn.addEventListener('click', getMeatNutrition)
 
 function getMeatNutrition() {
+  let meatCalories
+  let meatFat
+  let meatProtein
+  fetch(crustNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      crustCalories = parseFloat(data.nutrition.nutrients[10].amount) * 50
+      crustFat = parseFloat(data.nutrition.nutrients[25].amount)
+      crustProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      meatCalories += crustCalories
+      meatFat += crustFat
+      meatProtein += crustProtein
+      // *50
+    })
+
+  fetch(marinaraNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      marinaraCalories = parseFloat(data.nutrition.nutrients[10].amount) * 250
+      marinaraFat = parseFloat(data.nutrition.nutrients[25].amount)
+      marinaraProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      meatCalories += marinaraCalories
+      meatFat += marinaraFat
+      meatProtein += marinaraProtein
+      // *250
+    })
+
+  fetch(mozzNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      mozzCalories = parseFloat(data.nutrition.nutrients[10].amount) * 100
+      mozzFat = parseFloat(data.nutrition.nutrients[25].amount)
+      mozzProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      meatCalories += mozzCalories
+      meatFat += mozzFat
+      meatProtein += mozzProtein
+      // *100
+
+
+    })
+  fetch(pepperoniNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      pepperoniCalories = parseFloat(data.nutrition.nutrients[10].amount) * 1600
+      pepperoniFat = parseFloat(data.nutrition.nutrients[25].amount)
+      pepperoniProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      meatCalories += pepperoniCalories
+      meatFat += pepperoniFat
+      meatProtein += pepperoniProtein
+      // *1600
+    })
+  fetch(sausageNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      sausageCalories = parseFloat(data.nutrition.nutrients[10].amount) * 4.5
+      sausageFat = parseFloat(data.nutrition.nutrients[25].amount)
+      sausageProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      meatCalories += sausageCalories
+      meatFat += sausageFat
+      meatProtein += sausageProtein
+      // *4.5
+    })
+  fetch(baconNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      baconCalories = parseFloat(data.nutrition.nutrients[10].amount) * 200
+      baconFat = parseFloat(data.nutrition.nutrients[25].amount)
+      baconProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      meatCalories += baconCalories
+      meatFat += baconFat
+      meatProtein += baconProtein
+      // *200
+
+    })
+  fetch(hamNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      console.log(data)
+      hamCalories = parseFloat(data.nutrition.nutrients[10].amount) / 120
+      hamFat = parseFloat(data.nutrition.nutrients[25].amount)
+      hamProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      meatCalories += hamCalories
+      meatFat += hamFat
+      meatProtein += hamProtein
+      // /120
+
+    })
+
   meatCalEl.textContent = "Calories: 880"
   meatFatEl.textContent = "Fat: 40g"
   meatProEl.textContent = "Protein: 34g"
@@ -543,6 +655,131 @@ function getMeatNutrition() {
 supNutBtn.addEventListener('click', getSupremeNutrition)
 
 function getSupremeNutrition() {
+  let supremeCalories
+  let supremeFat
+  let supremeProtein
+  fetch(crustNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      crustCalories = parseFloat(data.nutrition.nutrients[10].amount) * 50
+      crustFat = parseFloat(data.nutrition.nutrients[25].amount)
+      crustProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      supremeCalories += crustCalories
+      supremeFat += crustFat
+      supremeProtein += crustFat
+
+      // *50
+    })
+
+  fetch(marinaraNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      marinaraCalories = parseFloat(data.nutrition.nutrients[10].amount) * 250
+      marinaraFat = parseFloat(data.nutrition.nutrients[25].amount)
+      marinaraProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      supremeCalories += marinaraCalories
+      supremeFat += marinaraFat
+      supremeProtein += marinaraProtein
+      // *250
+    })
+
+  fetch(mozzNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      mozzCalories = parseFloat(data.nutrition.nutrients[10].amount) * 100
+      mozzFat = parseFloat(data.nutrition.nutrients[25].amount)
+      mozzProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      supremeCalories += mozzCalories
+      supremeFat += mozzFat
+      supremeProtein += mozzProtein
+      // *100
+    })
+
+  fetch(mushroomNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      mushroomCalories = parseFloat(data.nutrition.nutrients[10].amount) * 3
+      mushroomFat = parseFloat(data.nutrition.nutrients[25].amount)
+      mushroomProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      supremeCalories += mushroomCalories
+      supremeFat += mushroomFat
+      supremeProtein += mushroomProtein
+      // *3
+    })
+
+  fetch(bellNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      bellPepperCalories = parseFloat(data.nutrition.nutrients[10].amount) / 3
+      bellPepperFat = parseFloat(data.nutrition.nutrients[25].amount)
+      bellPepperProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      supremeCalories += bellPepperCalories
+      supremeFat += bellPepperFat
+      supremeProtein += bellPepperProtein
+      // /3
+    })
+  fetch(onionNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      onionCalories = parseFloat(data.nutrition.nutrients[10].amount) / 2
+      onionFat = parseFloat(data.nutrition.nutrients[25].amount)
+      onionProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      supremeCalories += onionCalories
+      supremeFat += onionFat
+      supremeProtein += onionProtein
+      // /2
+    })
+  fetch(olivesNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      olivesCalories = parseFloat(data.nutrition.nutrients[10].amount) * 375
+      olivesFat = parseFloat(data.nutrition.nutrients[25].amount)
+      olivesProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      supremeCalories += olivesCalories
+      supremeFat += olivesFat
+      supremeProtein += olivesProtein
+      // *375
+    })
+  fetch(pepperoniNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      pepperoniCalories = parseFloat(data.nutrition.nutrients[10].amount) * 1600
+      pepperoniFat = parseFloat(data.nutrition.nutrients[25].amount)
+      pepperoniProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      supremeCalories += pepperoniCalories
+      supremeFat += pepperoniFat
+      supremeProtein += pepperoniProtein
+      // *1600
+    })
+  fetch(sausageNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      sausageCalories = parseFloat(data.nutrition.nutrients[10].amount) * 4.5
+      sausageFat = parseFloat(data.nutrition.nutrients[25].amount)
+      sausageProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      supremeCalories += sausageCalories
+      supremeFat += sausageFat
+      supremeProtein += sausageProtein
+      // *4.5
+    })
   supCalEl.textContent = "Calories: 820"
   supFatEl.textContent = "Fat: 34g"
   supProEl.textContent = "Protein: 28g"
@@ -552,8 +789,95 @@ function getSupremeNutrition() {
 hawNutBtn.addEventListener('click', getHawaiianNutrition)
 
 function getHawaiianNutrition() {
+  let hawaiianCalories
+  let hawaiianFat
+  let hawaiianProtein
+  fetch(crustNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      crustCalories = parseFloat(data.nutrition.nutrients[10].amount) * 50
+      crustFat = parseFloat(data.nutrition.nutrients[25].amount)
+      crustProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      hawaiianCalories += crustCalories
+      hawaiianFat += crustFat
+      hawaiianProtein += crustFat
+
+      // *50
+    })
+
+  fetch(mozzNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      mozzCalories = parseFloat(data.nutrition.nutrients[10].amount) * 100
+      mozzFat = parseFloat(data.nutrition.nutrients[25].amount)
+      mozzProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      hawaiianCalories += mozzCalories
+      hawaiianFat += mozzFat
+      hawaiianProtein += mozzProtein
+      // *100
+    })
+
+  fetch(baconNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      baconCalories = parseFloat(data.nutrition.nutrients[10].amount) * 200
+      baconFat = parseFloat(data.nutrition.nutrients[25].amount)
+      baconProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      hawaiianCalories += baconCalories
+      hawaiianFat += baconFat
+      hawaiianProtein += baconProtein
+      // *200
+
+    })
+  fetch(hamNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      hamCalories = parseFloat(data.nutrition.nutrients[10].amount) / 120
+      hamFat = parseFloat(data.nutrition.nutrients[25].amount)
+      hamProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      hawaiianCalories += hamCalories
+      hawaiianFat += hamFat
+      hawaiianProtein += hamProtein
+      // /120
+
+    })
+  fetch(pineappleNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      pineappleCalories = parseFloat(data.nutrition.nutrients[10].amount)
+      pineappleFat = parseFloat(data.nutrition.nutrients[25].amount)
+      pineappleProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      hawaiianCalories += pineappleCalories
+      hawaiianFat += pineappleFat
+      hawaiianProtein += pineappleProtein
+      // *400
+    })
+  fetch(oliveOilNutritionUrl)
+    .then(function (results) {
+      return results.json();
+    })
+    .then(function (data) {
+      oliveOilCalories = parseFloat(data.nutrition.nutrients[10].amount)
+      oliveOilFat = parseFloat(data.nutrition.nutrients[25].amount)
+      oliveOilProtein = parseFloat(data.nutrition.nutrients[16].amount)
+      hawaiianCalories += oliveOilCalories
+      hawaiianFat += oliveOilFat
+      hawaiianProtein += oliveOilProtein
+        * 55
+    })
+
+
   hawCalEl.textContent = "Calories: 780"
   hawFatEl.textContent = "Fat: 30g"
   hawProEl.textContent = "Protein: 30g"
-
 }
