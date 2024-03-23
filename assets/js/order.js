@@ -1,9 +1,21 @@
-var buttonEl = document.createElement("button");
-var orderArray = [];
+// var buttonEl = document.createElement("button");
+// var orderArray = [];
+
+
 var storedOrder = localStorage.getItem('order');
-const orderedItems2 = JSON.parse(localStorage.getItem('order') || '[]' )
+const orderedItems2 = JSON.parse(localStorage.getItem('order') || '[]')
 let orderList = document.getElementById('order-list')
+const subtotalArr = JSON.parse(localStorage.getItem('order') || '[]')
+const subtotalEl = document.getElementById('subtotal')
+const salesTaxEl = document.getElementById('sales-tax')
+const totalEl = document.getElementById('total')
+const placeOrderBtn = document.getElementById('place-order-button')
+
+
+
+
 // var listEl = document.getElementById("order List");
+
 
 // if(storedOrder){
 //     orderArray = JSON.parse(storedOrder);
@@ -46,11 +58,50 @@ let orderList = document.getElementById('order-list')
 
 // addToOrder(order);
 
-function displayOrder (){
-for (var i=0; i< orderedItems2.length; i++){
-let li = document.createElement('li')
-li.textContent = orderedItems2[i].foodItem+" $"+orderedItems2[i].itemPrice
-orderList.appendChild(li)
+function displayOrder() {
+    for (var i = 0; i < orderedItems2.length; i++) {
+        let li = document.createElement('li')
+        li.textContent = orderedItems2[i].foodItem + " $" + orderedItems2[i].itemPrice
+        orderList.appendChild(li)
+    }
 }
-}
+
 displayOrder()
+
+function getTotal() {
+    function getSubtotal() {
+        let subtotalCount = 0;
+        var options = { style: 'currency', currency: 'USD' };
+        var formatter = new Intl.NumberFormat('en-US', options);
+        for (let i = 0; i < subtotalArr.length; i++) {
+            subtotalCount += subtotalArr[i].itemPrice;
+
+            let subtotal = subtotalCount
+
+            subtotalEl.textContent = ' $' + subtotal
+            let salesTax = subtotal * .075
+
+            var result = formatter.format(salesTax);
+            salesTaxEl.textContent = " " + result
+            var total = subtotal + salesTax
+            totalEl.textContent = " " + formatter.format(total)
+        }
+
+    }
+    getSubtotal()
+
+
+}
+getTotal()
+
+placeOrderBtn.addEventListener('click', placeOrder)
+
+function placeOrder () {
+alert("Your order has been placed")
+localStorage.clear()
+location.reload()
+}
+  
+  
+
+  

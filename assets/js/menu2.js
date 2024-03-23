@@ -4,7 +4,7 @@
 
 // localStorage.setItem("order", JSON.stringify(order));
 // element variables
-const vegNutBtn = document.getElementById('veggie-nutrition-btn2')
+const vegNutBtn = document.getElementById('veggie-nutrition-btn')
 const meatNutBtn = document.getElementById('meat-nutrition-btn')
 const supNutBtn = document.getElementById('supreme-nutrition-btn')
 const hawNutBtn = document.getElementById('hawaiian-nutrition-btn')
@@ -37,17 +37,91 @@ const orderedItems = JSON.parse(localStorage.getItem('orders') || '[]' )
 const margTitle = document.getElementById('marg-title')
 const margPrice = document.getElementById('margherita-price')
 
-
+// adds pizzas to order page
 margBtn.addEventListener('click', orderMarg)
 function orderMarg(e){
   e.preventDefault()
 var margherita = {
-  foodItem: "margherita",
+  foodItem: "Margherita",
   itemPrice: 16,
 };
 orderedItems.push(margherita)
 localStorage.setItem("order", JSON.stringify(orderedItems))
 }
+
+marBtn.addEventListener('click', orderMar)
+function orderMar(e){
+  e.preventDefault()
+var marinara = {
+  foodItem: "Marinara",
+  itemPrice: 14,
+};
+orderedItems.push(marinara)
+localStorage.setItem("order", JSON.stringify(orderedItems))
+}
+
+pepBtn.addEventListener('click', orderPep)
+function orderPep(e){
+  e.preventDefault()
+var pepperoni = {
+  foodItem: "Pepperoni",
+  itemPrice: 17,
+};
+orderedItems.push(pepperoni)
+localStorage.setItem("order", JSON.stringify(orderedItems))
+}
+
+vegBtn.addEventListener('click', orderVeg)
+function orderVeg(e){
+  e.preventDefault()
+var veggie = {
+  foodItem: "Veggie",
+  itemPrice: 19,
+};
+orderedItems.push(veggie)
+localStorage.setItem("order", JSON.stringify(orderedItems))
+}
+
+
+meatBtn.addEventListener('click', orderMeat)
+function orderMeat(e){
+  e.preventDefault()
+var meat = {
+  foodItem: "Meat",
+  itemPrice: 21,
+};
+orderedItems.push(meat)
+localStorage.setItem("order", JSON.stringify(orderedItems))
+}
+
+
+supBtn.addEventListener('click', orderSup)
+function orderSup(e){
+  e.preventDefault()
+var supreme = {
+  foodItem: "Supreme",
+  itemPrice: 22,
+};
+orderedItems.push(supreme)
+localStorage.setItem("order", JSON.stringify(orderedItems))
+}
+
+
+hawBtn.addEventListener('click', orderHaw)
+function orderHaw(e){
+  e.preventDefault()
+var hawaiian = {
+  foodItem: "Hawaiian",
+  itemPrice: 19,
+};
+orderedItems.push(hawaiian)
+localStorage.setItem("order", JSON.stringify(orderedItems))
+}
+
+
+
+
+
 
 // script for bulma modal
 document.addEventListener('DOMContentLoaded', () => {
