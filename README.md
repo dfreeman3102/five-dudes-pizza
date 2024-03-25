@@ -1,124 +1,77 @@
-# collaboration-project
+# Five Dudes Pizza
 
-# 07 Project 1: Interactive Front-End Application
+## Description
 
-At the conclusion of each phase of this course, you’ll work with a group of your fellow students to create a **project**. A project is collaborative work among a group of developers to create an application that solves a real-world problem. Projects model the experience you’ll encounter in every development role at any company, from large multinational businesses to small startups. Coding is collaborative.
+A local pizzaria chain needed an interactive website that allowed their customers to order pizzas online. They needed to minimize time spent taking pickup orders over the phone. Online orders would save time and labor which allows more customers to be served. The website will showcase the pizzas along with descriptions, prices, pictures, and nutrional information. An about me page is also created to give additional information about the company.
 
-A project is a bit different from the Challenge assignments you’ve worked on so far. One of the biggest differences is that you’ll no longer build an application by yourself! This has some advantages&mdash;you won’t have to do all of the work, you can divide up duties, and you can share skills and knowledge with other developers and lean on their strengths. This can also be challenging if you’re used to working alone. Constant communication and time management are just two of the skills you’ll need to practice to make sure everyone in your group works together to complete the project. 
+## Table of Contents (Optional)
 
-Projects won’t provide you with a user story or acceptance criteria, because you and your group will create them once you decide which real-world problem your application will solve. This lack of constraints can be freeing in a way, because you have room to build what you want, but it also means that you have to decide what those constraints are before you can start working.
+If your README is long, add a table of contents to make it easy for users to find what they need.
 
-Finally, a project requires a presentation, because you’re trying to convince an audience that it serves a purpose. Your instructional staff and fellow students are investors, and you’re pitching your creation to them&mdash;an experience that developers are required to do frequently. Your presentation is just as important as the actual project, so take it just as seriously.
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
 
-## Project Requirements
+## Installation
 
-You and your group will use everything you’ve learned over the past six modules to create a real-world front-end application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
+Browser with local storage required to place orders. 
+Website can be accessed at: https://dfreeman3102.github.io/five-dudes-pizza/
 
-* Use a CSS framework other than Bootstrap.
+## Usage
 
-* Be deployed to GitHub Pages.
+When visiting the site, users are greeted with a carousel of images and a calendar showing days we are closed. Users can also find our hours of operation, different locations, and links to social media accounts. The navbar on top allows users to conveniently navigate to each page.
+![homepage](assets/homepage.png)
 
-* Be interactive (i.e., accept and respond to user input).
+The menu page shows the pizzas offered. It is divided by classic pizzas and specialty pizzas. Each pizza is displayed along with the price and decription for that pizza. Users also have the option to see nutritional information of each pizza. To order a pizza, users need to press the "Add to Order" button shown under each pizza. The pizza will be saved to local storage.
+![menu-top](assets/menu-top.png)
+![menu-bottom](assets/menu-bottom.png)
+![menu-nutrition](assets/menu-nutrition.png)
 
-* Use at least two [server-side APIs](https://coding-boot-camp.github.io/full-stack/apis/api-resources).
+The about us page shows the story, the mission, and the promise of Five Dudes Pizza. The logos throughout the years are displayed. The footer showcases the year the company was established, how many pizzas were made, how many customers served, and how many locations there are.
+![about-top](assets/about-top.png)
+![about-bottom](assets/about-bottom.png)
 
-* Does not use alerts, confirms, or prompts (use modals).
+The order page displays the user's order along with prices. The subtotal, sales tax, and total are displayed. The place order places the order and sends it to the pizzaria and clears the order from local storage. User's can use the "Reset Order" button if there is an issue with the order.
+![order1](assets/order1.png)
 
-* Use client-side storage to store persistent data.
+## Credits
 
-* Be responsive.
+GitHub public apis provided links to APIs used:
+https://github.com/public-apis/public-apis
 
-* Have a polished UI.
+Nager.Date was used for the calendar feature:
+https://date.nager.at/
 
-* Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
+Foodish was used for images:
+https://foodish-api.com/
 
-* Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+Edamam and Spoonacular API were used for ingredients and nutritional information:
+https://www.edamam.com/
+https://spoonacular.com/food-api
 
-## Presentation Requirements
 
-Use this [project presentation template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to address the following: 
+## License
 
-* Elevator pitch: a one minute description of your application
+MIT License
 
-* Concept: What is your user story? What was your motivation for development?
+Copyright (c) 2024 jinkc21
 
-* Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-* Demo: Show your stuff!
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-* Directions for Future Development
-
-* Links to the deployed application and the GitHub repository
-
-## Grading Requirements
-
-This project is graded based on the following criteria:
-
-### Technical Acceptance Criteria: 25%
-
-* Satisfies the following code requirements:
-
-  * Application uses at least two [server-side APIs](https://coding-boot-camp.github.io/full-stack/apis/api-resources)
-
-  * Application uses client-side storage to store persistent data.
-
-  * Application doesn't use JS alerts, prompts, or confirms (uses modals instead).
-
-  * Application uses a CSS framework other than Bootstrap.
-
-  * Application is interactive (accepts and responds to user input)
-
-### Concept 10%
-
-* Application should be a unique and novel idea.
-
-* Your group should clearly and concisely articulate your project idea.
-
-### Deployment: 20%
-
-* Application deployed at live URL and loads with no errors.
-
-* Application GitHub URL submitted.
-
-### Repository Quality: 10%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains a quality README file with description, screenshot, and link to deployed application.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application is responsive.
-
-### Presentation 10%
-
-* Your group should present using a slide deck.
-
-* Every group member should speak during the presentation.
-
-* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
-
-### Collaboration 10%
-
-* There are no major disparities in the number of GitHub contributions between group members.
-
-## How to Submit Your Interactive Front-End Project
-
-**Each member of your group** is required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a README describing the project.
-
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ---
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
